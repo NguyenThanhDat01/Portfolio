@@ -38,7 +38,7 @@ export const ContextProvider = ({ children }: ThemeProviderProps) => {
     };
   } else {
     themeStyle = {
-      backgroundColor: "#222832",
+             backgroundImage: "url('src/assets/imges/backgroud.webp')",
       color: "#ffffff",
       minHeight: "100vh",
       width: "100%",

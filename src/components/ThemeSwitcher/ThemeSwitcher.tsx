@@ -2,7 +2,8 @@
 import { useContext } from "react";
 import { AiFillSun } from "react-icons/ai";
 import { FaRegMoon } from "react-icons/fa";
-import { ThemeContext } from "../context/theme.context";
+import { ThemeContext } from "../../context/theme.context";
+
 
 
 const ThemeSwitcher = () => {

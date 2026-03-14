@@ -1,24 +1,30 @@
 import { NavLink } from "react-router-dom";
-import { Row, Col } from "antd";
-import ThemeSwitcher from "../pages/ThemeSwitcher";
+import { Row, Col, Space } from "antd";
+
 import { ThemeContext } from "../context/theme.context";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import ChangeLang from "../components/ChangeLang/ChangeLang";
+import { AiOutlineHome } from "react-icons/ai";
+import { FaCode } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import ThemeSwitcher from "../components/ThemeSwitcher/ThemeSwitcher";
 
 const AppHeader = () => {
-    const { theme } = useContext(ThemeContext)!;
-const isDark = theme === "dark";
+  const { theme } = useContext(ThemeContext)!;
+  const isDark = theme === "dark";
+  const { t } = useTranslation();
+
   return (
     <header
       style={{
-        background: isDark ? "#000000" : "#18283e",
-         color: isDark ? "#fff" : "#000",
-     
+        background: isDark ? "#000000" : "transparent",
+        color: isDark ? "#fff" : "#000",
         padding: "20px 80px",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
+        boxShadow: "none",
       }}
     >
       <Row justify="space-between" align="middle">
-
         {/* Logo */}
         <Col>
           <div
@@ -27,12 +33,12 @@ const isDark = theme === "dark";
               alignItems: "center",
               gap: "15px",
               fontSize: "26px",
-              fontWeight: "bold",
+              fontWeight: 600,
               color: "#facc15",
             }}
           >
             <img
-              src="/src/assets/logo/D.png"
+              src="src/assets/imges/D.png"
               alt="avatar"
               style={{
                 width: "60px",
@@ -41,7 +47,6 @@ const isDark = theme === "dark";
                 objectFit: "cover",
               }}
             />
-
             Nguyễn Thành Đạt
           </div>
         </Col>
@@ -57,46 +62,71 @@ const isDark = theme === "dark";
             <NavLink
               to="/"
               style={({ isActive }) => ({
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: 20,
+                fontWeight: 600,
                 color: isActive ? "#facc15" : "#f1f5f9",
                 textDecoration: "none",
-                fontSize: "18px",
                 borderBottom: isActive ? "2px solid #facc15" : "none",
-                paddingBottom: "4px",
+                paddingBottom: 4,
+                textShadow: "0 2px 6px rgba(0,0,0,40)",
               })}
             >
-              Home
+              <span>
+                <AiOutlineHome /> {t("navbar.home")}
+              </span>
             </NavLink>
 
             <NavLink
               to="/skill"
               style={({ isActive }) => ({
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: 20,
+                fontWeight: 600,
                 color: isActive ? "#facc15" : "#f1f5f9",
                 textDecoration: "none",
-                fontSize: "18px",
                 borderBottom: isActive ? "2px solid #facc15" : "none",
-                paddingBottom: "4px",
+                paddingBottom: 4,
+                textShadow: "0 2px 6px rgba(0,0,0,40)",
               })}
             >
-              Skills
+              <span>
+                <FaCode /> {t("navbar.skill")}
+              </span>
             </NavLink>
 
             <NavLink
               to="/contact"
               style={({ isActive }) => ({
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: 20,
+                fontWeight: 600,
                 color: isActive ? "#facc15" : "#f1f5f9",
                 textDecoration: "none",
-                fontSize: "18px",
                 borderBottom: isActive ? "2px solid #facc15" : "none",
-                paddingBottom: "4px",
+                paddingBottom: 4,
+                textShadow: "0 2px 6px rgba(0,0,0,40)",
               })}
             >
-              Contact
+              <span>
+                <MdEmail /> {t("navbar.contact")}
+              </span>
             </NavLink>
           </nav>
         </Col>
-      <ThemeSwitcher/>
+        <Col>
+          <Space size={8}>
+            <ChangeLang />
+            <ThemeSwitcher />
+          </Space>
+        </Col>
       </Row>
-    
     </header>
   );
 };

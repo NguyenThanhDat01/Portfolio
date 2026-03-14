@@ -5,11 +5,13 @@ import "./index.css";
 
 const App = () => {
   return (
+ 
     <Routes>
       {/* Client */}
       <Route path="/*" element={<AppRoutes />} />
      
     </Routes>
+  
   );
 };
 

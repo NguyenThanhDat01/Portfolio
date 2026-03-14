@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Home",
+    "skill": "Skill",
+    "contact": "Contact"
+  },
+  
+  "profile": {
+    "welcome": "Welcome to the website",
+    "name": "Nguyen Thanh Dat"
+  }
+}

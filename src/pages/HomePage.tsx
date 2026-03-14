@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 const HomePage = () => {
+      const { t } = useTranslation();
     return(
         <div
-        style={{background:"red"}}>
-            Nguyễn Thành Đạt
+      >
+           {t("profile.name")}
         </div>
     )
 
