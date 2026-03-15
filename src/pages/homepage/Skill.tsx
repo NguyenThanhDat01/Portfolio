@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
 
-import { FaCode, FaCss3Alt, FaHtml5, FaJs } from "react-icons/fa";
+import { FaCode} from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import figma from "../../assets/images/figma.svg";
-import react from "../../assets/images//react.svg";
+import react from "../../assets/images/react.svg";
 import html from "../../assets/images/html.svg";
 import js from "../../assets/images/javascript.svg";
 import ts from "../../assets/images/typescript.svg";

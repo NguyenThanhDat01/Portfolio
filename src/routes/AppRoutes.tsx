@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/homepage/HomePage";
 
 import Contact from "../pages/ContactPage";
-import Skill from "../pages/SkillPage";
 import LayOut from "../layout/LayOut";
 import ProjectPage from "../pages/ProjectPage";
 import IntroducePage from "../pages/IntroducePage";
@@ -18,7 +17,7 @@ const AppRoutes = () => {
        <Route path="/skill" element={<SkillPage />}/>
         <Route path="/introduce" element={<IntroducePage />}/>
          <Route path="/project" element={<ProjectPage />}/>
-      </Route>
+      </Route>z
 
     </Routes>
   );

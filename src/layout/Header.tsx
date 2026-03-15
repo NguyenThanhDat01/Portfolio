@@ -5,11 +5,11 @@ import { ThemeContext } from "../context/theme.context";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import ChangeLang from "../components/ChangeLang/ChangeLang";
-import { AiOutlineHome } from "react-icons/ai";
+
 import { FaCode, FaFolderOpen, FaGithub, FaHome, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ThemeSwitcher from "../components/ThemeSwitcher/ThemeSwitcher";
-import { GithubOutlined } from "@ant-design/icons";
+
 
 const AppHeader = () => {
   const { theme } = useContext(ThemeContext)!;

@@ -1,13 +1,12 @@
 
-import { useContext } from "react";
+
 import Skill from "./Skill";
 import Text from "./Text";
-import { ThemeContext } from "../../context/theme.context";
+
 
 
 const HomePage = () => {
- const { theme } = useContext(ThemeContext)!;
-  const isDark = theme === "dark";
+
 
   return (
     <>
