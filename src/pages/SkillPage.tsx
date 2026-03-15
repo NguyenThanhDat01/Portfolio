@@ -1,4 +1,4 @@
-const Skill = () => {
+const SkillPage = () => {
     return (
         <div>
             hahaha
@@ -6,4 +6,4 @@ const Skill = () => {
     )
 
 }
-export default Skill;
+export default SkillPage;

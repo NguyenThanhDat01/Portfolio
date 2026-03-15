@@ -1,12 +1,20 @@
 {
   "navbar": {
     "home": "Home",
-    "skill": "Skill",
-    "contact": "Contact"
+    "skill": "Skills",
+    "contact": "Contact",
+    "introduce":"About",
+    "project": "Project"
+    
   },
   
   "profile": {
+    "hi":"Hi, I'm Nguyen Thanh Dat",
     "welcome": "Welcome to the website",
-    "name": "Nguyen Thanh Dat"
+    "name": "Nguyen Thanh Dat",
+    "frontend":"Frontend Developer",
+    "school": "Final-year Information Technology students at Ho Chi Minh City University of Industry",
+    "department": "Department: Information Technology",
+    "specialized": "Major: Information Technology"
   }
 }

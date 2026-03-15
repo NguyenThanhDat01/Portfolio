@@ -38,8 +38,8 @@ export const ContextProvider = ({ children }: ThemeProviderProps) => {
     };
   } else {
     themeStyle = {
-             backgroundImage: "url('src/assets/imges/backgroud.webp')",
-      color: "#ffffff",
+    backgroundImage: "rgba(0,0,0,0.8)",
+    color: "#ffffff",
       minHeight: "100vh",
       width: "100%",
     };

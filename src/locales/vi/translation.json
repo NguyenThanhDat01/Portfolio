@@ -1,11 +1,17 @@
 {
   "navbar": {
     "home": "Trang chủ",
-    "skill": "Kĩ năng",
-    "contact": "Liên hệ"
+    "skill": "Kỹ năng",
+    "contact": "Liên hệ",
+     "introduce":"Giới thiệu",
+    "project": "Dự án"
   },
   "profile": {
+    "hi":"Chào, Tôi là Nguyễn Thành Đạt",
     "welcome": "Chào mừng đến website",
-    "name": "hahat"
+    "frontend":"Lập trình viên giao diện người dùng",
+    "school": "Sinh viên năm cuối ngành Công nghệ Thông tin tại Đại học Công Nghiệp thành phố Hồ Chí Minh",
+    "department": "Khoa: Công nghệ thông tin",
+    "specialized": "Chuyên ngành: Công nghệ thông tin"
   }
 }

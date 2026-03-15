@@ -2,7 +2,7 @@ import { Button } from "antd";
 
 import { LngContext } from "../../context/lng.context";
 import { useContext } from "react";
-
+import "flag-icons/css/flag-icons.min.css";
 const ChangeLang = () => {
   const { lng, toggleLanguage } = useContext(LngContext)!;
   return (
@@ -22,9 +22,16 @@ const ChangeLang = () => {
         background: "rgba(255,255,255,0.15)",
         color: "#fff",
         transition: "all 0.25s",
+        
       }}
     >
-      {lng.toUpperCase()}
+      <span   style={{ cursor: "pointer", fontSize: 20 }}>
+         {lng === "vi" ? (
+    <span className="fi fi-vn"></span>
+  ) : (
+    <span className="fi fi-gb"></span>
+  )}
+  </span>
     </Button>
   );
 };

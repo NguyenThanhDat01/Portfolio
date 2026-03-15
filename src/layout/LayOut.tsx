@@ -2,28 +2,30 @@ import { Outlet } from "react-router-dom";
 
 import AppHeader from "./Header";
 import { Content } from "antd/es/layout/layout";
+import AppFooter from "./Footer";
+import { useContext } from "react";
+import { ThemeContext } from "../context/theme.context";
 
 const LayOut = () => {
+  const { theme } = useContext(ThemeContext)!;
+    const isDark = theme === "dark";
   return (
     <div
        style={{
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-       backgroundImage: "url('src/assets/imges/backgroud.webp')",
+    
+ backgroundImage: "url('src/assets/imges/bachgourd.jpg')",
   backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "no-repeat",
+    
     
   }}
     >
-       <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background: "rgba(0,0,0,0.50)"
-    }}
-  />
+      <div style={{  background: isDark ? "rgba(10, 10, 10, 0.9)" : "transparent",}}>
+ 
       <AppHeader />
 
       <Content
@@ -33,8 +35,11 @@ const LayOut = () => {
         }}
       >
         <Outlet />
+        
       </Content>
+      <AppFooter/>
 
+    </div>
     </div>
   );
 };
