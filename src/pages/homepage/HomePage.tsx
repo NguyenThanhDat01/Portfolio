@@ -3,7 +3,7 @@
 import Skill from "./Skill";
 import Text from "./Text";
 
-
+import detdet from "../../assets/images/detdet.jpg";
 
 const HomePage = () => {
 
@@ -33,7 +33,7 @@ const HomePage = () => {
         }}
       >
         <img
-        src="src/assets/images/detdet.jpg"
+        src={detdet}
           style={{ width: "350px" ,borderRadius: "15px", marginLeft:"80px"}}
         />
     </div>

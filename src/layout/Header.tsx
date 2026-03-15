@@ -10,7 +10,7 @@ import { FaCode, FaFolderOpen, FaGithub, FaHome, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ThemeSwitcher from "../components/ThemeSwitcher/ThemeSwitcher";
 
-
+import avatar from "../assets/images/D.png";
 const AppHeader = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
@@ -41,7 +41,7 @@ const AppHeader = () => {
             
         <NavLink to="/">
             <img
-              src="src/assets/images/D.png"
+              src={avatar}
               alt="avatar"
               style={{
                 width: "60px",

@@ -5,7 +5,7 @@ import { Content } from "antd/es/layout/layout";
 import AppFooter from "./Footer";
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme.context";
-
+import background from "../assets/images/background.jpg";
 const LayOut = () => {
   const { theme } = useContext(ThemeContext)!;
     const isDark = theme === "dark";
@@ -16,7 +16,7 @@ const LayOut = () => {
     flexDirection: "column",
     minHeight: "100vh",
     
- backgroundImage: "url('src/assets/images/bachgourd.jpg')",
+ backgroundImage: `url(${background})`,
   backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
