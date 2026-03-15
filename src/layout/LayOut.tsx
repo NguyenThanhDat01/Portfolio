@@ -16,7 +16,7 @@ const LayOut = () => {
     flexDirection: "column",
     minHeight: "100vh",
     
- backgroundImage: "url('src/assets/imges/bachgourd.jpg')",
+ backgroundImage: "url('src/assets/images/bachgourd.jpg')",
   backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

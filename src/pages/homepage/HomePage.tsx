@@ -18,7 +18,7 @@ const HomePage = () => {
   alignItems: "flex-start",
   minHeight: "70vh",
   padding: "50px 80px 0 100px",   // giảm từ 100 -> 40
-  backgroundImage: "url('/background.jpg')",
+ 
   backgroundSize: "cover",
   backgroundPosition: "center",
    
@@ -34,7 +34,7 @@ const HomePage = () => {
         }}
       >
         <img
-        src="src/assets/imges/detdet.jpg"
+        src="src/assets/images/detdet.jpg"
           style={{ width: "350px" ,borderRadius: "15px", marginLeft:"80px"}}
         />
     </div>

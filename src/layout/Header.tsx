@@ -41,7 +41,7 @@ const AppHeader = () => {
             
         <NavLink to="/">
             <img
-              src="src/assets/imges/D.png"
+              src="src/assets/images/D.png"
               alt="avatar"
               style={{
                 width: "60px",

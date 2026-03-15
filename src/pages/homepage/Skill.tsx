@@ -1,37 +1,35 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
-import {
-  SiMui,
-  SiNginx,
-  SiStrapi,
-  SiTypescript,
-  SiDocker,
-  SiBootstrap,
-  SiFigma,
-  SiFirebase,
-  SiGo
-} from "react-icons/si";
+
 import { FaCode, FaCss3Alt, FaHtml5, FaJs } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-
+import figma from "../../assets/images/figma.svg";
+import react from "../../assets/images/react.svg";
+import html from "../../assets/images/html.svg";
+import js from "../../assets/images/javascript.svg";
+import ts from "../../assets/images/typescript.svg";
+import git from "../../assets/images/git.svg";
+import antd from "../../assets/images/antd.svg";
+import postman from "../../assets/images/postman.svg";
 const Skill = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
   const { t } = useTranslation();
-  const skill = [
+
 
   
-    { name: "Figma", imges: <img src='src/assets/imges/figma.svg' width={50}  /> },
-    { name: "React", imges: <img src='src/assets/imges/react.svg' width={50}  />  },
-    { name: "HTML", imges: <img src='src/assets/imges/html.svg' width={50}  />  },
-    { name: "JavaScript", imges: <img src='src/assets/imges/javascript.svg' width={50}  />  },
-    { name: "TypeScript", imges: <img src='src/assets/imges/typescript.svg' width={50}  />  },
-    { name: "GitHup", imges: <img src='src/assets/imges/git.svg' width={50}  />  },
-    { name: "Antd", imges: <img src='src/assets/imges/antd.svg' width={50}  />  },
-       { name: "Postman", imges: <img src='src/assets/imges/postman.svg' width={50}  />  },
+const skill = [
+  { name: "Figma", images: <img src={figma} width={50} /> },
+  { name: "React", images: <img src={react} width={50} /> },
+  { name: "HTML", images: <img src={html} width={50} /> },
+  { name: "JavaScript", images: <img src={js} width={50} /> },
+  { name: "TypeScript", images: <img src={ts} width={50} /> },
+  { name: "GitHub", images: <img src={git} width={50} /> },
+  { name: "Antd", images: <img src={antd} width={50} /> },
+  { name: "Postman", images: <img src={postman} width={50} /> },
+];
    
-   
-  ];
+
 
   return (
     <div
@@ -101,7 +99,7 @@ const Skill = () => {
                 color: "#38bdf8",
               }}
             >
-              {skill.imges}
+              {skill.images}
             </div>
 
             <div style={{ fontSize: "16px" }}>{skill.name}</div>
