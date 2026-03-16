@@ -15,6 +15,28 @@
     "frontend":"Frontend Developer",
     "school": "Final-year Information Technology students at Ho Chi Minh City University of Industry",
     "department": "Department: Information Technology",
-    "specialized": "Major: Information Technology"
+    "specialized": "Major: Information Technology",
+    "download": "Download CV",
+    "view-project": "View Project"
+  },
+    "footer":{
+      "portfolio":" PORTFOLIO - Nguyen Thanh Dat"
+
+  },
+    "project":{
+
+    "description": "Description",
+    "tasks": "Front-end UI Development Tasks",
+    "tech-stack": "Tech Stack",
+    "phone": "Website Selling Phones"
+    },
+  "commerce-1":{
+    "a":"Website mua sắm trực tuyến cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý các mặt hàng trong giỏ hàng.",
+    "b":"Xây dựng giao diện người dùng đáp ứng (responsive UI) bằng React + TypeScript",
+    "c": "Lấy và hiển thị danh sách sản phẩm từ API REST",
+    "d":"Triển khai trang chi tiết sản phẩm",
+    "e":"Tạo giao diện bảng điều khiển quản trị",
+    "f": "Gọi API để thêm, cập nhật và xóa sản phẩm"
   }
+  
 }

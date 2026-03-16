@@ -1,5 +1,6 @@
 
 
+import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../context/theme.context";
 import { useContext } from "react";
 
@@ -7,7 +8,7 @@ import { useContext } from "react";
 const AppFooter = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
-
+    const { t } = useTranslation();
 
   return (
     <footer
@@ -23,7 +24,7 @@ const AppFooter = () => {
 
       }}
     >
-     PROTFOLIO-NguyenThanhDat
+     {t("footer.portfolio")}
     </footer>
   );
 };

@@ -12,6 +12,29 @@
     "frontend":"Lập trình viên giao diện người dùng",
     "school": "Sinh viên năm cuối ngành Công nghệ Thông tin tại Đại học Công Nghiệp thành phố Hồ Chí Minh",
     "department": "Khoa: Công nghệ thông tin",
-    "specialized": "Chuyên ngành: Công nghệ thông tin"
+    "specialized": "Chuyên ngành: Công nghệ thông tin",
+    "download": "Tải CV",
+    "view-project": "xem dự án"
+    
+  },
+    "footer":{
+      "portfolio":" PORTFOLIO - Nguyễn  Thành Đạt"
+  },
+  "project":{
+
+    "description": "Mô tả",
+    "tasks": "Nhiệm vụ phát triển giao diện người dùng (Front-end):",
+    "tech-stack": "Công nghệ sữ dụng",
+    "phone": "Trang website bán điện thoại"
+  },
+  "commerce-1":{
+    "a":"Website mua sắm trực tuyến cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý các mặt hàng trong giỏ hàng.",
+    "b":"Xây dựng giao diện người dùng đáp ứng (responsive UI) bằng React + TypeScript",
+    "c": "Lấy và hiển thị danh sách sản phẩm từ API REST",
+    "d":"Triển khai trang chi tiết sản phẩm",
+    "e":"Tạo giao diện bảng điều khiển quản trị",
+    "f": "Gọi API để thêm, cập nhật và xóa sản phẩm"
   }
+
+
 }

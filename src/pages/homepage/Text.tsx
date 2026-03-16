@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import Typed from "typed.js";
 import { ThemeContext } from "../../context/theme.context";
 
+import { Link } from "react-router-dom";
+
 const Text = () => {
        const { t } = useTranslation();
       const el = useRef(null);
@@ -36,14 +38,15 @@ const Text = () => {
             fontSize: "48px",
             color: "white",
             margin: 0,
-            lineHeight: "1.2",
+            lineHeight: "2.1",
              
           }}
         >
          <span  style={{
     fontWeight: "700",
     margin: 0,
-    color:isDark?"red":"#f0329e"
+    color:isDark?"red":"#f0329e",
+  
    
   }}> {t("profile.hi")}</span>
         </h1>
@@ -70,10 +73,49 @@ const Text = () => {
           {t("profile.specialized")}
         </p>
         </div>
-        <div style={{ display: "flex", gap: 15, marginTop: 20, }}>
-         
-          <Button  style={{ background:isDark?"linear-gradient(90deg,#15803d,#ca8a04)" :"linear-gradient(90deg,#2563eb,#9333ea,#db2777)",color:"white", fontWeight:"600",fontSize:"16px" }} href="/src/assets/CV/CV_NguyenThanhDat.pdf" download>Download CV</Button>
-        </div>
+        
+       <div style={{ display: "flex", gap: 15, marginTop: 20 }}>
+<Link to="/project">
+  <Button
+    style={{
+      width: "180px",
+      background: isDark
+        ? "linear-gradient(90deg,#15803d,#ca8a04)"
+        : "linear-gradient(90deg,#2563eb,#9333ea,#db2777)",
+      color: "white",
+      fontWeight: "600",
+      fontSize: "20px",
+      padding: "20px 25px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  
+  >
+    {t("profile.view-project")}
+  </Button>
+</Link>
+  <Button
+    style={{
+      width: "180px",
+      background: isDark
+        ? "linear-gradient(90deg,#15803d,#ca8a04)"
+        : "linear-gradient(90deg,#2563eb,#9333ea,#db2777)",
+      color: "white",
+      fontWeight: "600",
+      fontSize: "20px",
+      padding: "20px 25px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+    href="/src/assets/CV/CV_NguyenThanhDat.pdf"
+    download
+  >
+    {t("profile.download")}
+  </Button>
+
+</div>
       </div>
     )
 

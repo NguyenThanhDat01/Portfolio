@@ -88,30 +88,7 @@ const AppHeader = () => {
                <FaHome /> {t("navbar.home")}
               </span>
             </NavLink>
-              <NavLink
-              to="/introduce"
-                style={({ isActive }) => ({
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                fontSize: 20,
-                fontWeight: 600,
-                color: isActive
-              ? (isDark ?"#02f6ee": "#facc15" )
-              : (isDark ? "#f1f5f9" : "#ffffff"),
-                textDecoration: "none",
-                borderBottom: isActive 
-              ? (isDark ?  "3px solid #02f6ee":  "3px solid #facc15" )
-              : (isDark ? "none" :  "none"),
-                paddingBottom: 4,
-                textShadow: "0 2px 6px rgba(0,0,0,40)",
-                transition: "all 0.3s ease"
-              })}
-            >
-              <span>
-                <FaUser /> {t("navbar.introduce")}
-              </span>
-            </NavLink>
+           
 
             <NavLink
               to="/skill"
@@ -164,6 +141,30 @@ const AppHeader = () => {
               </span>
             </NavLink>
             
+               <NavLink
+              to="/introduce"
+                style={({ isActive }) => ({
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: 20,
+                fontWeight: 600,
+                color: isActive
+              ? (isDark ?"#02f6ee": "#facc15" )
+              : (isDark ? "#f1f5f9" : "#ffffff"),
+                textDecoration: "none",
+                borderBottom: isActive 
+              ? (isDark ?  "3px solid #02f6ee":  "3px solid #facc15" )
+              : (isDark ? "none" :  "none"),
+                paddingBottom: 4,
+                textShadow: "0 2px 6px rgba(0,0,0,40)",
+                transition: "all 0.3s ease"
+              })}
+            >
+              <span>
+                <FaUser /> {t("navbar.introduce")}
+              </span>
+            </NavLink>
 
             <NavLink
               to="/contact"

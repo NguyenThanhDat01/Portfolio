@@ -19,7 +19,7 @@ const ThemeSwitcher = () => {
         border: "none",
         cursor: "pointer",
         fontWeight: 600,
-        fontSize: 14,
+        fontSize: 18,
         display: "flex",
         alignItems: "center",
         gap: 6,

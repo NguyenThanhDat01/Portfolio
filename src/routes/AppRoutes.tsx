@@ -3,9 +3,9 @@ import HomePage from "../pages/homepage/HomePage";
 
 import Contact from "../pages/ContactPage";
 import LayOut from "../layout/LayOut";
-import ProjectPage from "../pages/ProjectPage";
+import ProjectPage from "../pages/projecpage/ProjectPage";
 import IntroducePage from "../pages/IntroducePage";
-import SkillPage from "../pages/SkillPage";
+import SkillPage from "../pages/skillspage/SkillPage";
 
 
 const AppRoutes = () => {
