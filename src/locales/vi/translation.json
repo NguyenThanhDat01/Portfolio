@@ -7,14 +7,18 @@
     "project": "Dự án"
   },
   "profile": {
-    "hi":"Chào, Tôi là Nguyễn Thành Đạt",
+    "hi":"Xin chào, Em là Nguyễn Thành Đạt",
     "welcome": "Chào mừng đến website",
     "frontend":"Lập trình viên giao diện người dùng",
     "school": "Sinh viên năm cuối ngành Công nghệ Thông tin tại Đại học Công Nghiệp thành phố Hồ Chí Minh",
     "department": "Khoa: Công nghệ thông tin",
     "specialized": "Chuyên ngành: Công nghệ thông tin",
     "download": "Tải CV",
-    "view-project": "xem dự án"
+    "view-project": "Xem dự án",
+    "goal":"Mục đích",
+    "skill":"Kỹ năng",
+    "experience":"Kinh nghiệm",
+     "strengths":"Điểm mạnh"
     
   },
     "footer":{
@@ -25,7 +29,11 @@
     "description": "Mô tả",
     "tasks": "Nhiệm vụ phát triển giao diện người dùng (Front-end):",
     "tech-stack": "Công nghệ sữ dụng",
-    "phone": "Trang website bán điện thoại"
+    "booking": "Đặt lịch hẹn MideCare",
+    "keyboard-mouse": "Trang web bán bàn phím và chuột máy tính",
+     "commerce": "Trang web thương mại điện tử",
+    "medicare": "Trang web đặt lịch hẹn khám bệnh",
+    "portfolio": "Trang web portfolio của tôi"
   },
   "commerce-1":{
     "a":"Website mua sắm trực tuyến cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý các mặt hàng trong giỏ hàng.",
@@ -34,7 +42,53 @@
     "d":"Triển khai trang chi tiết sản phẩm",
     "e":"Tạo giao diện bảng điều khiển quản trị",
     "f": "Gọi API để thêm, cập nhật và xóa sản phẩm"
+  },
+    "commerce-2":{
+    "a":"Ứng dụng web dạng workspace thông minh, cho phép người dùng nhập lệnh (command) và hiển thị nội dung động dưới dạng các panel trực quan. Giao diện được thiết kế hiện đại, tối ưu trải nghiệm người dùng với khả năng tương tác linh hoạt và hiển thị dữ liệu theo thời gian thực.",
+    "b":"Xây dựng giao diện người dùng đáp ứng (responsive UI) bằng React + JavaScript",
+    "c": "Thiết kế và phát triển các component tái sử dụng (Reusable Components)",
+    "d":"Tích hợp API REST để lấy và hiển thị dữ liệu sản phẩm",
+    "e":"Xây dựng giao diện quản trị (Admin Dashboard)",
+    "f": "Thực hiện các chức năng CRUD (đọc, thêm, xóa, cập nhật) thông qua API",
+    "g": "Quản lý state ứng dụng bằng Context API / Zustand",
+    "h": "Tối ưu hiệu năng và trải nghiệm người dùng (UX/UI)",
+    "i": "Hỗ trợ Dark/Light Mode"
+  },
+  "booking":{
+    "a":"Website là hệ thống đặt lịch khám bệnh trực tuyến, cho phép người dùng tìm kiếm dịch vụ y tế, xem thông tin và đặt lịch hẹn một cách nhanh chóng. Ứng dụng cung cấp giao diện thân thiện, dễ sử dụng và tối ưu cho nhiều thiết bị. Hệ thống quản trị hỗ trợ quản lý dữ liệu và tương tác với API để xử lý thông tin động.",
+    "b":"Xây dựng giao diện người dùng responsive bằng React + TypeScript",
+    "c": "Thiết kế UI cho hệ thống đặt lịch (booking interface)",
+    "d":"Tích hợp API REST để lấy và hiển thị dữ liệu",
+    "e":"Xây dựng chức năng đặt lịch, hiển thị danh sách và chi tiết",
+    "f": "Xử lý các thao tác CRUD thông qua API",
+    "g": "Quản lý state ứng dụng (Context API / hook)",
+    "h": "Tối ưu trải nghiệm người dùng và hiệu năng",
+    "i": "Hỗ trợ Dark/Light Mode "
+  },
+  "portfolio":{
+    "a":"Portfolio cá nhân được phát triển bằng React và TypeScript, nhằm trình bày kỹ năng và các dự án thực tế. Ứng dụng sử dụng kiến trúc component tái sử dụng, hỗ trợ responsive UI, dark/light mode và tối ưu trải nghiệm người dùng. Website giúp thể hiện khả năng xây dựng giao diện hiện đại và quản lý cấu trúc frontend hiệu quả.",
+    "b":"Xây dựng giao diện portfolio bằng React + TypeScript",
+    "c": "Thiết kế layout hiện đại với nhiều section (Home, Skills, Projects, Contact)",
+    "d":"Phát triển component tái sử dụng (Button, Card, Skill Item, Project Item)",
+    "e":"Implement responsive UI cho nhiều thiết bị",
+    "f": "Xây dựng Dark/Light mode",
+    "g": "Tích hợp đa ngôn ngữ (i18n) hỗ trợ chuyển đổi ngôn ngữ linh hoạt",
+    "h": "Tối ưu UI/UX và animation để nâng cao trải nghiệm người dùng",
+    "i": "Quản lý state (theme, language, dữ liệu hiển thị)"
+  },
+   "about":{
+    "hi":"Xin chào, Em là Nguyễn Thành Đạt đến từ thành phố Hồ Chí Minh",
+     "school": "Hiện tại em đang là sinh viên năm cuối ngành Công nghệ Thông tin tại Đại học Công Nghiệp thành phố Hồ Chí Minh",
+    "department": "Khoa: Công nghệ thông tin",
+    "specialized": "Chuyên ngành: Công nghệ thông tin",
+    "skills": "Có kinh nghiệm làm việc với ReactJS, TypeScript, JavaScript, HTML, CSS,  RESTful API và xây dựng các giao diện responsive, tối ưu hiệu năng.",
+    "experience": "Đã thực hiện nhiều dự án cá nhân như website portfolio, ứng dụng quản lý và các sản phẩm web thực tế, giúp nâng cao kỹ năng phát triển và tư duy UI/UX.",
+    "strengths": "Có khả năng tự học tốt, tư duy logic, chủ động trong công việc và luôn tìm cách cải thiện chất lượng sản phẩm.",
+    "goal": "Mong muốn được làm việc trong môi trường chuyên nghiệp để phát triển kỹ năng, tích lũy kinh nghiệm và đóng góp vào các sản phẩm thực tế."
+
   }
+
+
 
 
 }

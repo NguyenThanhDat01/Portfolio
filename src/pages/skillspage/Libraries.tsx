@@ -62,12 +62,13 @@ const Libraries = () => {
                 cursor: "pointer",
                 transition: "all .3s ease",
                 backdropFilter: "blur(10px)",
+             
             }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
-                e.currentTarget.style.boxShadow = isDark
-                ? "0 15px 40px rgba(11, 237, 45, 0.35)"
-                : "0 15px 40px rgba(147,51,234,0.35)";
+                e.currentTarget.style.boxShadow =isDark
+                ? "0 0 30px rgba(0, 255, 51, 0.3)"
+                :"0 0 30px rgba(255,0,150,0.3)";
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "";

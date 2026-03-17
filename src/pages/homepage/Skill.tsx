@@ -80,7 +80,10 @@ const skill = [
   key={i}
   style={{
     background: "#0b132b",
-    border: "1px solid #1e3a8a",
+    border: isDark
+                  ? "1px solid rgba(11,237,45,0.4)"
+                  : "1px solid rgba(147,51,234,0.5)",
+                 
     borderRadius: "14px",
     height: "140px",
     width: "160px",
@@ -94,7 +97,9 @@ const skill = [
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 40px rgba(59,130,246,.35)";
+    e.currentTarget.style.boxShadow =  isDark
+                ? "0 0 30px rgba(0, 255, 51, 0.3)"
+                :"0 0 30px rgba(255,0,150,0.3)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.transform = "";

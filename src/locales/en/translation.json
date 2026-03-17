@@ -17,7 +17,11 @@
     "department": "Department: Information Technology",
     "specialized": "Major: Information Technology",
     "download": "Download CV",
-    "view-project": "View Project"
+    "view-project": "View Project",
+       "goal":"Goal",
+       "skill": "Skills",
+    "experience":"Experience",
+     "strengths":"Strengths"
   },
     "footer":{
       "portfolio":" PORTFOLIO - Nguyen Thanh Dat"
@@ -28,15 +32,63 @@
     "description": "Description",
     "tasks": "Front-end UI Development Tasks",
     "tech-stack": "Tech Stack",
-    "phone": "Website Selling Phones"
+    "keyboard-mouse": "Website Selling Computer Keyboards & Mouse",
+    "booking": "MediCare-Booking",
+    "commerce": "E-commerce Website ",
+    "medicare": "Website For Scheduling Medical Appointments",
+    "portfolio": "My Portfolio Website"
     },
   "commerce-1":{
-    "a":"Website mua sắm trực tuyến cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý các mặt hàng trong giỏ hàng.",
-    "b":"Xây dựng giao diện người dùng đáp ứng (responsive UI) bằng React + TypeScript",
-    "c": "Lấy và hiển thị danh sách sản phẩm từ API REST",
-    "d":"Triển khai trang chi tiết sản phẩm",
-    "e":"Tạo giao diện bảng điều khiển quản trị",
-    "f": "Gọi API để thêm, cập nhật và xóa sản phẩm"
+    "a":"Online shopping websites allow users to browse products, view product details, and manage items in their shopping carts.",
+    "b":"Building responsive UI using React + JavaScript",
+    "c": "Retrieve and display a list of products from a REST API",
+    "d":"Implementing the product details page",
+    "e":"Create an admin dashboard interface",
+    "f": "Call the API to add, update, and remove products"
+  },
+  "commerce-2":{
+    "a":"This intelligent workspace web application allows users to input commands and display dynamic content in intuitive panels. The interface is designed to be modern, optimizing the user experience with flexible interaction and real-time data display.",
+    "b":"Build a responsive UI using React + TypeScript",
+    "c": "Design and develop reusable components",
+    "d":"Integrate a REST API to retrieve and display product data",
+    "e":"Build an admin dashboard",
+    "f": "Implement CRUD (Create, Read, Update, Delete) functions via API",
+    "g": "Manage application state using Context API / Zustand",
+    "h": "Optimize performance and user experience (UX/UI)",
+    "i": "Support Dark/Light Mode "
+  },
+  "booking":{
+    "a":"The website is an online appointment scheduling system, allowing users to quickly search for medical services, view information, and book appointments. The application provides a user-friendly interface that is easy to use and optimized for multiple devices. The administration system supports data management and interacts with APIs to process dynamic information.",
+    "b":"Developed responsive user interfaces using React and TypeScript",
+    "c": "Designed booking interface for healthcare services",
+    "d":"Integrate a REST API to retrieve and display product data",
+    "e":"Integrated RESTful APIs for dynamic data rendering",
+    "f": "Implemented booking features and data management (CRUD)",
+    "g": "Manage application state using Context API / Zustand",
+    "h": "Optimize performance and user experience (UX/UI)",
+    "i": "Support Dark/Light Mode "
+  },
+    "portfolio":{
+    "a":"Portfolio cá nhân được phát triển bằng React và TypeScript, nhằm trình bày kỹ năng và các dự án thực tế. Ứng dụng sử dụng kiến trúc component tái sử dụng, hỗ trợ responsive UI, dark/light mode và tối ưu trải nghiệm người dùng. Website giúp thể hiện khả năng xây dựng giao diện hiện đại và quản lý cấu trúc frontend hiệu quả.",
+    "b":"Developed a personal portfolio using React and TypeScript",
+    "c": "Designed a modern multi-section layout (Home, Skills, Projects, Contact)",
+    "d":"Built reusable UI components (Button, Card, Skill Item, Project Item)",
+    "e":"Implemented responsive design for multiple devices",
+    "f": "Developed dark/light mode functionality",
+    "g": "Integrated internationalization (i18n) for multi-language support",
+    "h": "Improved UI/UX with animations and user-friendly interactions",
+    "i": "Managed application state (theme, language, display data)"
+  },
+  "about": {
+    "hi": "Hello, I'm Nguyen Thanh Dat from Ho Chi Minh City.",
+    "school": "I am currently a final-year Information Technology student at Industrial University of Ho Chi Minh City.",
+    "department": "Faculty: Information Technology",
+    "specialized": "Major: Information Technology",
+    "skills": "Experienced in ReactJS, TypeScript, JavaScript, HTML, CSS, and RESTful APIs, with a strong focus on building responsive and high-performance user interfaces.",
+    "experience": "I have worked on several personal projects such as portfolio websites, management systems, and real-world web applications, helping me improve both development skills and UI/UX thinking.",
+    "strengths": "Strong self-learning ability, logical thinking, proactive attitude, and a continuous effort to improve product quality.",
+    "goal": "Seeking an opportunity to work in a professional environment to develop my skills, gain practical experience, and contribute to real-world projects."
   }
+
   
 }

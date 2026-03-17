@@ -1,4 +1,7 @@
-import CommerceProject1 from "./E-Commerce.Project 1";
+import BookingCare from "./BookingCare";
+
+import CommerceProject2 from "./E-Commerce.Project2";
+import Portfolio from "./Portfolio";
 
 
 const ProjectPage = () => {
@@ -11,7 +14,17 @@ const ProjectPage = () => {
  
    
       }}>
-       <CommerceProject1/>
+        <div style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "100px",
+
+    flexWrap: "wrap",
+  }}>
+    <Portfolio/>
+      <BookingCare/>
+     <CommerceProject2/>
+       </div>
         </div>
     )
 
