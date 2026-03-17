@@ -95,6 +95,7 @@ const Text = () => {
     {t("profile.view-project")}
   </Button>
 </Link>
+ <a href="/CV/CV_NguyenThanhDat.pdf" download>
   <Button
     style={{
       width: "180px",
@@ -109,12 +110,10 @@ const Text = () => {
       alignItems: "center",
       justifyContent: "center",
     }}
-    href="/src/assets/CV/CV_NguyenThanhDat.pdf"
-    download
   >
     {t("profile.download")}
   </Button>
-
+</a>
 </div>
       </div>
     )
