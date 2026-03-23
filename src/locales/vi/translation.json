@@ -35,13 +35,11 @@
     "medicare": "Trang web đặt lịch hẹn khám bệnh",
     "portfolio": "Trang web portfolio của tôi"
   },
-  "commerce-1":{
-    "a":"Website mua sắm trực tuyến cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý các mặt hàng trong giỏ hàng.",
-    "b":"Xây dựng giao diện người dùng đáp ứng (responsive UI) bằng React + TypeScript",
-    "c": "Lấy và hiển thị danh sách sản phẩm từ API REST",
-    "d":"Triển khai trang chi tiết sản phẩm",
-    "e":"Tạo giao diện bảng điều khiển quản trị",
-    "f": "Gọi API để thêm, cập nhật và xóa sản phẩm"
+  "contact":{
+    "a":"Liên hệ ngay",
+    "b":"Số điện thoại",
+    "c": "Địa chỉ"
+
   },
     "commerce-2":{
     "a":"Ứng dụng web dạng workspace thông minh, cho phép người dùng nhập lệnh (command) và hiển thị nội dung động dưới dạng các panel trực quan. Giao diện được thiết kế hiện đại, tối ưu trải nghiệm người dùng với khả năng tương tác linh hoạt và hiển thị dữ liệu theo thời gian thực.",
@@ -61,7 +59,7 @@
     "d":"Tích hợp API REST để lấy và hiển thị dữ liệu",
     "e":"Xây dựng chức năng đặt lịch, hiển thị danh sách và chi tiết",
     "f": "Xử lý các thao tác CRUD thông qua API",
-    "g": "Quản lý state ứng dụng (Context API / hook)",
+    "g": "Quản lý state ứng dụng (Context API / Hook)",
     "h": "Tối ưu trải nghiệm người dùng và hiệu năng",
     "i": "Hỗ trợ Dark/Light Mode "
   },
@@ -81,7 +79,7 @@
      "school": "Hiện tại em đang là sinh viên năm cuối ngành Công nghệ Thông tin tại Đại học Công Nghiệp thành phố Hồ Chí Minh",
     "department": "Khoa: Công nghệ thông tin",
     "specialized": "Chuyên ngành: Công nghệ thông tin",
-    "skills": "Có kinh nghiệm làm việc với ReactJS, TypeScript, JavaScript, HTML, CSS,  RESTful API và xây dựng các giao diện responsive, tối ưu hiệu năng.",
+    "skills": "Có kinh nghiệm làm việc với ReactJS, TypeScript, JavaScript, HTML, CSS và xây dựng các giao diện responsive, tối ưu hiệu năng.",
     "experience": "Đã thực hiện nhiều dự án cá nhân như website portfolio, ứng dụng quản lý và các sản phẩm web thực tế, giúp nâng cao kỹ năng phát triển và tư duy UI/UX.",
     "strengths": "Có khả năng tự học tốt, tư duy logic, chủ động trong công việc và luôn tìm cách cải thiện chất lượng sản phẩm.",
     "goal": "Mong muốn được làm việc trong môi trường chuyên nghiệp để phát triển kỹ năng, tích lũy kinh nghiệm và đóng góp vào các sản phẩm thực tế."

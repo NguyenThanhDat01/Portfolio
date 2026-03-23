@@ -38,13 +38,11 @@
     "medicare": "Website For Scheduling Medical Appointments",
     "portfolio": "My Portfolio Website"
     },
-  "commerce-1":{
-    "a":"Online shopping websites allow users to browse products, view product details, and manage items in their shopping carts.",
-    "b":"Building responsive UI using React + JavaScript",
-    "c": "Retrieve and display a list of products from a REST API",
-    "d":"Implementing the product details page",
-    "e":"Create an admin dashboard interface",
-    "f": "Call the API to add, update, and remove products"
+   "contact":{
+    "a":"Contact Us Now",
+    "b":"Phone",
+    "c": "Address"
+
   },
   "commerce-2":{
     "a":"This intelligent workspace web application allows users to input commands and display dynamic content in intuitive panels. The interface is designed to be modern, optimizing the user experience with flexible interaction and real-time data display.",
@@ -53,7 +51,7 @@
     "d":"Integrate a REST API to retrieve and display product data",
     "e":"Build an admin dashboard",
     "f": "Implement CRUD (Create, Read, Update, Delete) functions via API",
-    "g": "Manage application state using Context API / Zustand",
+    "g": "Manage application state using Context API / Hook",
     "h": "Optimize performance and user experience (UX/UI)",
     "i": "Support Dark/Light Mode "
   },
@@ -84,7 +82,7 @@
     "school": "I am currently a final-year Information Technology student at Industrial University of Ho Chi Minh City.",
     "department": "Faculty: Information Technology",
     "specialized": "Major: Information Technology",
-    "skills": "Experienced in ReactJS, TypeScript, JavaScript, HTML, CSS, and RESTful APIs, with a strong focus on building responsive and high-performance user interfaces.",
+    "skills": "Experienced in ReactJS, TypeScript, JavaScript, HTML, CSS, with a strong focus on building responsive and high-performance user interfaces.",
     "experience": "I have worked on several personal projects such as portfolio websites, management systems, and real-world web applications, helping me improve both development skills and UI/UX thinking.",
     "strengths": "Strong self-learning ability, logical thinking, proactive attitude, and a continuous effort to improve product quality.",
     "goal": "Seeking an opportunity to work in a professional environment to develop my skills, gain practical experience, and contribute to real-world projects."

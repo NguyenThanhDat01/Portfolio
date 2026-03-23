@@ -8,7 +8,8 @@ import { ThemeContext } from "../../context/theme.context";
 
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ThemeContext)!;
-
+  
+      const isDark = theme === "dark";
   return (
     <button
       onClick={toggleTheme}
@@ -24,7 +25,7 @@ const ThemeSwitcher = () => {
         alignItems: "center",
         gap: 6,
         background: "rgba(255,255,255,0.15)",
-        color: "#fff",
+        color: isDark ?"#ffffff": "#080808",
         transition: "all 0.25s",
       }}
       onMouseEnter={(e) => {

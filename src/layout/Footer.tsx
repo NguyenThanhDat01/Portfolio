@@ -13,8 +13,8 @@ const AppFooter = () => {
   return (
     <footer
       style={{
-        background: isDark ? "rgba(0, 0, 0, 0.5)" : "transparent",
-        color:isDark ?"#02f6ee": "#fcfcfc",
+     
+        color:isDark ?"#02f6ee": "#0A25F1",
         padding: "20px 80px",
         boxShadow: "none",
         fontSize: "20px",

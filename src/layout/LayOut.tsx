@@ -4,7 +4,6 @@ import { Content } from "antd/es/layout/layout";
 import AppFooter from "./Footer";
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme.context";
-import background from "../assets/images/background.jpg";
 
 const LayOut = () => {
   const { theme } = useContext(ThemeContext)!;
@@ -17,43 +16,39 @@ const LayOut = () => {
         flexDirection: "column",
         minHeight: "100vh",
 
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        
       }}
     >
-      {/* overlay */}
+      {/* HEADER */}
       <div
         style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-
-          // 👇 overlay chuẩn hơn (dark + light đều đẹp)
-          background: isDark ? "rgba(10, 10, 10, 0.9)" : "transparent",
-         
-
-          // 👇 responsive padding
-          padding: "16px",
+          position: "sticky",
+          top: 0,
+          zIndex: 1000,
+          backdropFilter: "blur(10px)",
+          background: isDark
+            ? "rgba(10,10,10,0.7)"
+            : "rgba(255,255,255,0.7)",
         }}
       >
         <AppHeader />
+      </div>
 
-        <Content
-          style={{
-            flex: 1,
-            width: "100%",
-            maxWidth: "1200px",
-            margin: "0 auto",
+      {/* CONTENT */}
+      <Content
+        style={{
+          flex: 1,
+          width: "100%",
 
-            // 👇 responsive spacing
-            padding: "16px",
-          }}
-        >
-          <Outlet />
-        </Content>
+          // 🔥 bỏ maxWidth → full màn hình
+          padding: "clamp(12px, 4vw, 32px)",
+        }}
+      >
+        <Outlet />
+      </Content>
 
+      {/* FOOTER */}
+      <div>
         <AppFooter />
       </div>
     </div>

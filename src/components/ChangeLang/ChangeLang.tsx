@@ -24,6 +24,14 @@ const ChangeLang = () => {
         transition: "all 0.25s",
         
       }}
+       onMouseEnter={(e) => {
+        e.currentTarget.style.background = "rgba(255,255,255,0.25)";
+        e.currentTarget.style.transform = "translateY(-1px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = "rgba(255,255,255,0.15)";
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
     >
       <span   style={{ cursor: "pointer", fontSize: 20 }}>
          {lng === "vi" ? (

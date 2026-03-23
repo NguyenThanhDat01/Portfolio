@@ -13,6 +13,7 @@ import antd from "../../assets/images/antd.svg";
 import postman from "../../assets/images/postman.svg";
 import router from "../../assets/images/react-router.svg";
 import axios from "../../assets/images/axios.svg";
+import tw from "../../assets/images/tailwindcss.svg";
 const Skill = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
@@ -31,6 +32,7 @@ const skill = [
   { name: "Postman", images: postman },
   { name: "React-Router", images:router },
   { name: "Axios", images: axios },
+  { name: "TailwindCSS", images: tw },
 ];
    
 
@@ -48,13 +50,17 @@ const skill = [
     >
       <h2
         style={{
-           color: "#ffffff",
-     background:isDark?"linear-gradient(90deg,#15803d,#ca8a04)" :"linear-gradient(90deg,#2563eb,#9333ea,#db2777)",
+         
+     
     padding: "10px 25px",
     borderRadius: "12px",
     display: "inline-block",
-    textShadow: "0 4px 10px rgba(0,0,0,0.8)",
-    border: "1px solid #fff"
+   
+     color: isDark?   "#1cf704" :"#0A25F1",
+           
+            boxShadow:  isDark
+              ?"0 10px 40px rgba(197, 255, 214, 0.2)":"0 10px 40px rgba(139, 94, 235, 0.2)",
+             border: isDark ? "1px solid green" : "1px solid #0A25F1",
     
 
           

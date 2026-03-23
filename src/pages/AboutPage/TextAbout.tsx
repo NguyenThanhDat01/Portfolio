@@ -13,52 +13,63 @@ const TextAbout = () => {
     <div
       style={{
         display: "flex",
-        flexDirection: "column", // 👈 fix layout
+        flexDirection: "column",
         alignItems: "flex-start",
       }}
     >
       {/* TEXT */}
       <div
         style={{
-          color: "#ffffff",
-          
-          fontSize: "18px",
+          color: isDark ? "#e5e7eb" : "#000",
+          fontSize: "clamp(14px, 2.5vw, 18px)", // 🔥 responsive
           lineHeight: "1.7",
-          wordBreak: "break-word",
-          overflowWrap: "break-word",
-           
-    
-        }} 
+        }}
       >
-         <p style={{  color: isDark ? "#38bdf8" : "#FACC15",fontWeight: "600",
-    fontSize: "28px" }}>
-            <h4> {t("profile.skill")}</h4>
-        </p>
-        <p >
-          {t("about.skills")}
-        </p>
-         <p  style={{ color: isDark ? "#38bdf8" : "#FACC15", }}>
-             <h2>{t("profile.experience")}</h2> 
-        </p>
+        {/* SKILL */}
+        <h2
+          style={{
+            color: isDark ? "#38bdf8" : "#ff0000",
+  
+            fontSize: "clamp(20px, 4vw, 28px)",
+            marginTop: 10,
+          }}
+        >
+          {t("profile.skill")}
+        </h2>
+        <p>{t("about.skills")}</p>
 
-        <p>
-           
-          {t("about.experience")}
-        </p>
-          <p  style={{color: isDark ? "#38bdf8" : "#FACC15", }}>
-          <h2>{t("profile.strengths")}</h2> 
-        </p>
-        <p >
-          {t("about.strengths")}
-        </p>
+        {/* EXPERIENCE */}
+        <h2
+          style={{
+            color: isDark ? "#38bdf8" : "#ff0000",
+            fontSize: "clamp(20px, 4vw, 28px)",
+          }}
+        >
+          {t("profile.experience")}
+        </h2>
+        <p>{t("about.experience")}</p>
 
-        <p  style={{  color: isDark ? "#38bdf8" : "#FACC15", }}>
-         <h2>{t("profile.goal")}</h2> 
-        </p>
+        {/* STRENGTH */}
+        <h2
+          style={{
+            color: isDark ? "#38bdf8" : "#ff0000",
+            fontSize: "clamp(20px, 4vw, 28px)",
+          }}
+        >
+          {t("profile.strengths")}
+        </h2>
+        <p>{t("about.strengths")}</p>
 
-        <p>
-          {t("about.goal")}
-        </p>
+        {/* GOAL */}
+        <h2
+          style={{
+            color: isDark ? "#38bdf8" : "#ff0000",
+            fontSize: "clamp(20px, 4vw, 28px)",
+          }}
+        >
+          {t("profile.goal")}
+        </h2>
+        <p>{t("about.goal")}</p>
       </div>
 
       {/* BUTTON */}
@@ -67,52 +78,55 @@ const TextAbout = () => {
           display: "flex",
           gap: 15,
           marginTop: 25,
-          flexWrap: "wrap",
-         
+          flexWrap: "wrap", // 🔥 xuống dòng mobile
+          justifyContent: "center", // 🔥 mobile đẹp hơn
         }}
       >
         <Link to="/project">
           <Button
             style={{
-              width: "180px",
-              background: isDark
-                ? "linear-gradient(90deg,#15803d,#ca8a04)"
-                : "linear-gradient(90deg,#2563eb,#9333ea,#db2777)",
-              color: "white",
+              width: "clamp(140px, 45vw, 180px)", // 🔥 responsive
               fontWeight: "600",
-              fontSize: "18px",
-              padding: "18px 20px",
+              fontSize: "clamp(14px, 2.5vw, 18px)",
+              padding: "18px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              border: "1px solid white"
-              
+              color: isDark ? "#2f8026" : "#0A25F1",
+              boxShadow: isDark
+                ? "0 10px 40px rgba(197, 255, 214, 0.2)"
+                : "0 10px 40px rgba(139, 94, 235, 0.2)",
+              border: isDark
+                ? "1px solid green"
+                : "1px solid #0A25F1",
             }}
           >
             {t("profile.view-project")}
           </Button>
         </Link>
 
-        <Button
-          style={{
-            width: "180px",
-            background: isDark
-              ? "linear-gradient(90deg,#15803d,#ca8a04)"
-              : "linear-gradient(90deg,#2563eb,#9333ea,#db2777)",
-            color: "white",
-            fontWeight: "600",
-            fontSize: "18px",
-            padding: "18px 20px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            border: "1px solid white"
-          }}
-          href="/src/assets/CV/CV_NguyenThanhDat.pdf"
-          download
-        >
-          {t("profile.download")}
-        </Button>
+        <a href="/CV/CV_NguyenThanhDat.pdf" download>
+          <Button
+            style={{
+              width: "clamp(140px, 45vw, 180px)", // 🔥 responsive
+              fontWeight: "600",
+              fontSize: "clamp(14px, 2.5vw, 18px)",
+              padding: "18px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: isDark ? "#2f8026" : "#0A25F1",
+              boxShadow: isDark
+                ? "0 10px 40px rgba(197, 255, 214, 0.2)"
+                : "0 10px 40px rgba(139, 94, 235, 0.2)",
+              border: isDark
+                ? "1px solid green"
+                : "1px solid #0A25F1",
+            }}
+          >
+            {t("profile.download")}
+          </Button>
+        </a>
       </div>
     </div>
   );

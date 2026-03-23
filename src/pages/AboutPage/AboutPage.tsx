@@ -1,130 +1,127 @@
-import { useContext} from "react";
-import avatar from "../../assets/images/avatar.svg";
+import { useContext, useEffect } from "react";
+import avatar from "../../assets/images/detdet.jpg";
 import TextAbout from "./TextAbout";
 import { ThemeContext } from "../../context/theme.context";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const IntroducePage = () => {
-    const { t } = useTranslation();
-       
-       const { theme } = useContext(ThemeContext)!;
-        const isDark = theme === "dark";
+  const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext)!;
+  const isDark = theme === "dark";
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <>
-<div style={{
-          background: "rgba(255,255,255,0.05)",
-          backdropFilter: "blur(12px)",
-           border: isDark
-                ? "1px solid green"
-                : "1px solid rgba(147,51,234,0.5)",
-          borderRadius: "20px",
-          padding: "20px",
-        
-         
-          width: "100%",
-          boxShadow: isDark
-                ? "0 0 30px rgba(0, 255, 51, 0.3)"
-                :"0 0 30px rgba(255,0,150,0.3)",
-          transition: "0.3s",
-        }}>
-  <div
+    <div
       style={{
-        minHeight: "60vh",
-        padding: "10px 1px",
-        display: "grid",
-        gridTemplateColumns: "2.4fr 1fr", // 👈 chia 2 cột đều
-        alignItems: "center",
-        gap: "100px",
-       
-        color: "#fff",
+        backdropFilter: "blur(12px)",
+        borderRadius: "20px",
+
+        // 🔥 FIX CHÍNH Ở ĐÂY
+        padding: "clamp(16px, 5vw, 40px)",
+        maxWidth: "1000px",      // cân đẹp hơn 1200
+        margin: "0 auto",        // center chuẩn
+        width: "100%",
+        boxSizing: "border-box", // tránh lệch
+
       }}
     >
-      
-      {/* TEXT */}
-      <div>
-          <h1
-  style={{
-    fontSize: "40px",
-    color: "white",
-    margin: 0,
-    lineHeight: "1.4",
-    maxWidth: "700px" // 👈 giảm lại cho đẹp
-  }}
->
-  <span
-    style={{
-      fontWeight: "700",
-      color: isDark ? "red" : "#f0329e",
-      display: "block",            // 👈 bắt buộc
-      wordBreak: "break-word",
-      overflowWrap: "break-word",
-      whiteSpace: "pre-line"       // 👈 hỗ trợ \n nếu có
-    }}
-  >
-    {t("about.hi")}
-  </span>
-</h1>
-
-<h2
-  style={{
-    color: isDark ? "#1cf704" : "#38bdf8",
-    marginBottom: "10px",
-    fontWeight: "600",
-    fontSize: "28px"
-  }}
->
-  
-  Frontend Developer
-</h2>
-
-<div
-  style={{
-    color: "#e5e7eb",
-    maxWidth: "650px",
-    fontSize: "18px",
-    lineHeight: "1.7",
-    wordBreak: "break-word",
-    overflowWrap: "break-word"
-  }}
->
-  <p style={{ marginBottom: "10px" }}>
-    {t("about.school")}
-  </p>
-
-  <p style={{ marginBottom: "10px" }}>
-    {t("about.department")}
-  </p>
-
-  <p>
-    {t("about.specialized")}
-  </p>
-</div>
-      </div>
-
-      {/* IMAGE */}
       <div
         style={{
-          display: "flex",
-          justifyContent: "center", // 👈 canh giữa đẹp hơn flex-end
+          minHeight: "60vh",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          alignItems: "center",
+          gap: "40px",
         }}
       >
-        <img
-          src={avatar}
+        {/* TEXT */}
+        <div data-aos="fade-right">
+          <h1
+            style={{
+              fontSize: "clamp(28px, 5vw, 40px)",
+              color: "white",
+              lineHeight: "1.4",
+              margin: 0,
+            }}
+          >
+            <span
+              style={{
+                fontWeight: "700",
+                color: isDark ? "red" : "#0400ff",
+                display: "block",
+                whiteSpace: "pre-line",
+              }}
+            >
+              {t("about.hi")}
+            </span>
+          </h1>
+
+          <h2
+            style={{
+              color: isDark ? "#1cf704" : "rgb(255, 0, 0)",
+              margin: "10px 0",
+              fontWeight: "600",
+              fontSize: "clamp(20px, 4vw, 28px)",
+            }}
+          >
+            Frontend Developer
+          </h2>
+
+          <div
+            style={{
+              color: isDark ? "#e5e7eb" : "#000000",
+              fontSize: "clamp(14px, 2.5vw, 18px)",
+              lineHeight: "1.7",
+            }}
+          >
+            <p>{t("about.school")}</p>
+            <p>{t("about.department")}</p>
+            <p>{t("about.specialized")}</p>
+          </div>
+        </div>
+
+        {/* IMAGE */}
+        <div
+          data-aos="fade-left"
           style={{
-            width: "500px",
-            transform: "translateY(30px)",
+            display: "flex",
+            justifyContent: "center",
           }}
-        />
+        >
+          <img
+            src={avatar}
+            alt="avatar"
+            style={{
+              width: "clamp(180px, 60%, 280px)",
+              borderRadius: "15px",
+              objectFit: "cover",
+              boxShadow: "0 15px 40px rgba(0, 0, 0, 0.5)",
+              transition: "0.3s",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "scale(1.05)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "scale(1)")
+            }
+          />
+        </div>
       </div>
 
+      {/* ABOUT */}
+      <div data-aos="fade-up" style={{ marginTop: "40px" }}>
+        <TextAbout />
+      </div>
     </div>
-    <div>
-      <TextAbout/>
-    </div>
-
-</div>
-    
-    </>
   );
 };
 
