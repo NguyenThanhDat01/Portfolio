@@ -18,7 +18,7 @@ const AppRoutes = () => {
        <Route path="/skill" element={<SkillPage />}/>
         <Route path="/introduce" element={<AboutPage />}/>
          <Route path="/project" element={<ProjectPage />}/>
-      </Route>z
+      </Route>
 
     </Routes>
   );
