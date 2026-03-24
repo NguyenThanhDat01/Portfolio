@@ -10,19 +10,6 @@ const Project = () => {
   const isDark = theme === "dark";
   const { t } = useTranslation();
 
-  const cardStyle = {
-    padding: "20px",
-    borderRadius: "16px",
-    boxShadow: "0 5px 20px rgba(0,0,0,0.05)",
-    border: isDark ? "1px solid green" : "1px solid #0A25F1",
-  };
-
-  const dateStyle = {
-    color: isDark ? "#1cf704" : "#0A25F1",
-    fontSize: "22px",
-    fontWeight: "bold",
-  };
-
   const techs = [
     { name: "React", icon: <FaReact /> },
     { name: "TypeScript", icon: <TbBrandTypescript /> },
@@ -39,7 +26,18 @@ const Project = () => {
           100% { transform: translateY(0px); }
         }
 
+        /* ===== CONTAINER CENTER ===== */
+        .project-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 0 16px;
+        }
+
         .project-main {
+          width: 100%;
+          max-width: 1100px;
+          margin: 0 auto;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -47,6 +45,7 @@ const Project = () => {
           flex-wrap: wrap;
         }
 
+        /* ===== IMAGE ===== */
         .project-image {
           flex: 1;
           text-align: center;
@@ -60,6 +59,7 @@ const Project = () => {
           animation: float 3s ease-in-out infinite;
         }
 
+        /* ===== LIST ===== */
         .project-list {
           flex: 2;
           display: flex;
@@ -67,8 +67,11 @@ const Project = () => {
           gap: 20px;
         }
 
-        /* 🔥 HOVER XỊN */
+        /* ===== CARD ===== */
         .project-card {
+          padding: 20px;
+          border-radius: 16px;
+          box-shadow: 0 5px 20px rgba(0,0,0,0.05);
           transition: all 0.3s ease;
         }
 
@@ -96,6 +99,12 @@ const Project = () => {
           .project-list {
             order: 2;
             width: 100%;
+            align-items: center;
+          }
+
+          .project-card {
+            width: 100%;
+            max-width: 500px;
           }
 
           .project-image img {
@@ -121,57 +130,81 @@ const Project = () => {
       </div>
 
       {/* MAIN */}
-      <div className="project-main">
+      <div className="project-container">
+        <div className="project-main">
 
-        {/* IMAGE */}
-        <div className="project-image">
-          <img src={pro} alt="project" />
-        </div>
+          {/* IMAGE */}
+          <div className="project-image">
+            <img src={pro} alt="project" />
+          </div>
 
-        {/* LIST */}
-        <div className="project-list">
-
-          {[ 
-            { title: t("project.portfolio"), desc: t("portfolio.a") },
-            { title: t("project.medicare"), desc: t("booking.a") },
-            { title: t("project.commerce"), desc: t("commerce-2.a") }
-          ].map((item, index) => (
-            <div key={index} style={cardStyle} className="project-card">
-              <p style={dateStyle}>{item.title}</p>
-              <p>{item.desc}</p>
-
-              <p
+          {/* LIST */}
+          <div className="project-list">
+            {[
+              { title: t("project.portfolio"), desc: t("portfolio.a") },
+              { title: t("project.medicare"), desc: t("booking.a") },
+              { title: t("project.commerce"), desc: t("commerce-2.a") },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="project-card"
                 style={{
-                  fontWeight: 700,
-                  color: isDark ? "#1cf704" : "#0A25F1",
-                  marginBottom: "10px",
-                  fontSize: "18px",
+                  border: isDark
+                    ? "1px solid green"
+                    : "1px solid #0A25F1",
                 }}
               >
-                {t("project.tech-stack")}
-              </p>
+                <p
+                  style={{
+                    color: isDark ? "#1cf704" : "#0A25F1",
+                    fontSize: "22px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {item.title}
+                </p>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                {techs.map((tech) => (
-                  <span
-                    key={tech.name}
-                    style={{
-                      padding: "6px 10px",
-                      borderRadius: "8px",
-                      fontSize: "14px",
-                      color: isDark ? "white" : "black",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                    }}
-                  >
-                    {tech.icon}
-                    {tech.name}
-                  </span>
-                ))}
+                <p>{item.desc}</p>
+
+                <p
+                  style={{
+                    fontWeight: 700,
+                    color: isDark ? "#1cf704" : "#0A25F1",
+                    marginBottom: "10px",
+                    fontSize: "18px",
+                  }}
+                >
+                  {t("project.tech-stack")}
+                </p>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "10px",
+                  }}
+                >
+                  {techs.map((tech) => (
+                    <span
+                      key={tech.name}
+                      style={{
+                        padding: "6px 10px",
+                        borderRadius: "8px",
+                        fontSize: "14px",
+                        color: isDark ? "white" : "black",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                      }}
+                    >
+                      {tech.icon}
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
         </div>
       </div>
