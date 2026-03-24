@@ -35,7 +35,7 @@ const AppHeader = () => {
   return (
     <header
       style={{
-        backgroundImage:isDark ?  "linear-gradient(70deg, #150B14, #21091E,#150B14)": "linear-gradient(90deg, rgb(248, 237, 248), rgb(248, 237, 248)",
+        background:isDark ?  "linear-gradient(70deg, #150B14, #21091E,#150B14)": "linear-gradient(90deg, rgb(248, 237, 248), rgb(248, 237, 248)",
         color: isDark ? "#fff" : "#000",
         padding: isMobile ? "10px 15px" : "20px 80px",
         position: "sticky",

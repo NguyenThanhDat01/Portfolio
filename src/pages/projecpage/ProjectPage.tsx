@@ -2,18 +2,46 @@ import BookingCare from "./BookingCare";
 import CommerceProject2 from "./E-Commerce.Project2";
 import Portfolio from "./Portfolio";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const ProjectPage = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out-cubic",
+      offset: 120,
+    });
+
+    AOS.refresh(); // 🔥 fix animation
+  }, []);
+
   return (
     <div className="project-container">
+
       <div className="project-wrapper">
-        <Portfolio />
-        <BookingCare />
-        <CommerceProject2 />
+        
+        <div data-aos="zoom-in-up">
+          <Portfolio />
+        </div>
+
+        <div data-aos="zoom-in-up" data-aos-delay="150">
+          <BookingCare />
+        </div>
+
+        <div data-aos="zoom-in-up" data-aos-delay="300">
+          <CommerceProject2 />
+        </div>
+
       </div>
 
+      {/* STYLE */}
       <style>{`
         * {
-          box-sizing: border-box; /* 🔥 fix tràn layout */
+          box-sizing: border-box;
         }
 
         .project-container {
@@ -22,20 +50,26 @@ const ProjectPage = () => {
           display: flex;
           justify-content: center;
           padding: 20px 80px;
-          overflow-x: hidden; /* 🔥 tránh lệch ngang */
+          overflow-x: hidden;
         }
 
         .project-wrapper {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 100px;
+          gap: 80px;
           width: 100%;
           max-width: 1200px;
         }
 
-        .project-wrapper > * {
+        .project-wrapper > div {
           flex: 0 0 auto;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 🔥 hover effect */
+        .project-wrapper > div:hover {
+          transform: translateY(-10px) scale(1.03);
         }
 
         /* ===== TABLET ===== */
@@ -48,16 +82,15 @@ const ProjectPage = () => {
             gap: 40px;
           }
 
-          .project-wrapper > * {
-            width: calc(50% - 20px); /* 🔥 chuẩn 2 cột */
-            max-width: 100%;
+          .project-wrapper > div {
+            width: calc(50% - 20px);
           }
         }
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
           .project-container {
-            padding: 20px 0; /* 🔥 bỏ padding ngang -> hết lệch */
+            padding: 20px 0;
           }
 
           .project-wrapper {
@@ -66,9 +99,8 @@ const ProjectPage = () => {
             gap: 25px;
           }
 
-          .project-wrapper > * {
-            width: 100%;
-            max-width: 95%; /* 🔥 tránh dính mép màn hình */
+          .project-wrapper > div {
+            width: 95%;
           }
         }
       `}</style>

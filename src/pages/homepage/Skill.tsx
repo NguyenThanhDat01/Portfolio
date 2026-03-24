@@ -59,7 +59,7 @@ const skill = [
      color: isDark?   "#1cf704" :"#0A25F1",
            
             boxShadow:  isDark
-              ?"0 10px 40px rgba(197, 255, 214, 0.2)":"0 10px 40px rgba(139, 94, 235, 0.2)",
+              ?"0 10px 40px rgba(197, 255, 214, 0.1)":"0 10px 40px rgba(139, 94, 235, 0.1)",
              border: isDark ? "1px solid green" : "1px solid #0A25F1",
     
 
@@ -88,7 +88,7 @@ const skill = [
     background: "#0b132b",
     border: isDark
                   ? "1px solid rgba(11,237,45,0.4)"
-                  : "1px solid rgba(147,51,234,0.5)",
+                  : "1px solid rgba(13, 0, 255, 0.5)",
                  
     borderRadius: "14px",
     height: "140px",
@@ -105,7 +105,7 @@ const skill = [
     e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
     e.currentTarget.style.boxShadow =  isDark
                 ? "0 0 30px rgba(0, 255, 51, 0.3)"
-                :"0 0 30px rgba(255,0,150,0.3)";
+                :"0 0 30px rgba(0, 98, 255, 0.3)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.transform = "";

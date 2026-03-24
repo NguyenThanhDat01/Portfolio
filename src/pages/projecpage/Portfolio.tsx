@@ -7,7 +7,8 @@ import f2 from "../../assets/images/pflo2.gif";
 import f3 from "../../assets/images/pflo3.gif";
 import { Button } from "antd";
 import { FaCss3Alt, FaDemocrat, FaGithub, FaReact } from "react-icons/fa";
-import { RiJavascriptLine } from "react-icons/ri";
+
+import { TbBrandTypescript } from "react-icons/tb";
 
 const Portfolio = () => {
   const { theme } = useContext(ThemeContext)!;
@@ -17,7 +18,7 @@ const Portfolio = () => {
 
   const techs = [
     { name: "React", icon: <FaReact /> },
-    { name: "JavaScript", icon: <RiJavascriptLine /> },
+   { name: "TyeScript", icon: <TbBrandTypescript />},
     { name: "CSS", icon: <FaCss3Alt /> },
   ];
 

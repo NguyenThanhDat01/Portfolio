@@ -6,8 +6,9 @@ import cem1 from "../../assets/images/cem1.gif";
 import cem2 from "../../assets/images/cem2.gif";
 import cem3 from "../../assets/images/cem3.gif";
 import { Button } from "antd";
-import { FaCss3Alt, FaGithub, FaPinterest, FaReact } from "react-icons/fa";
-import { RiJavascriptLine } from "react-icons/ri";
+import { FaCss3Alt, FaGithub,  FaReact } from "react-icons/fa";
+
+import { TbBrandTypescript } from "react-icons/tb";
 
 const CommerceProject2 = () => {
   const { theme } = useContext(ThemeContext)!;
@@ -17,9 +18,9 @@ const CommerceProject2 = () => {
 
   const techs = [
     { name: "React", icon: <FaReact /> },
-    { name: "JavaScript", icon: <RiJavascriptLine /> },
+    { name: "TyeScript", icon: <TbBrandTypescript />},
     { name: "CSS", icon: <FaCss3Alt /> },
-    { name: "REST API", icon: <FaPinterest /> },
+  
   ];
 
   return (
