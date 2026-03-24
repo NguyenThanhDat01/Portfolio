@@ -4,8 +4,9 @@ import HomePage from "../pages/homepage/HomePage";
 import Contact from "../pages/contactpage/ContactPage";
 import LayOut from "../layout/LayOut";
 import ProjectPage from "../pages/projecpage/ProjectPage";
-import IntroducePage from "../pages/aboutpage/AboutPage";
+
 import SkillPage from "../pages/skillspage/SkillPage";
+import AboutPage from "../pages/about/AboutPage";
 
 
 const AppRoutes = () => {
@@ -15,7 +16,7 @@ const AppRoutes = () => {
         <Route index element={<HomePage />} />
        <Route path="/contact" element={<Contact />}/>
        <Route path="/skill" element={<SkillPage />}/>
-        <Route path="/introduce" element={<IntroducePage />}/>
+        <Route path="/introduce" element={<AboutPage />}/>
          <Route path="/project" element={<ProjectPage />}/>
       </Route>z
 

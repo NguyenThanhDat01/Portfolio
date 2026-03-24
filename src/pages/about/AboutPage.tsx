@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TextAbout from "./TextAbout";
 
-const IntroducePage = () => {
+const AboutPage = () => {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
@@ -126,4 +126,4 @@ const IntroducePage = () => {
   );
 };
 
-export default IntroducePage;
+export default AboutPage;
