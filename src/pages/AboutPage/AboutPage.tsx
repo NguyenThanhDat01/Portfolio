@@ -1,10 +1,11 @@
 import { useContext, useEffect } from "react";
 import avatar from "../../assets/images/detdet.jpg";
-import TextAbout from "./TextAbout";
+
 import { ThemeContext } from "../../context/theme.context";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TextAbout from "./TextAbout";
 
 const IntroducePage = () => {
   const { t } = useTranslation();
