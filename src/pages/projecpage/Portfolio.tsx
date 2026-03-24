@@ -120,41 +120,7 @@ const Portfolio = () => {
             GitHup
           </p>
 
-          <div style={{ display: "flex", marginTop: "20px" , gap:"10px"}}>
-            <Button
-              style={{
-                width: "180px",
-                color: "black",
-                fontWeight: "600",
-                fontSize: "20px",
-                padding: "20px 25px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              href="https://github.com/NguyenThanhDat01/Frontend-medicare_booking_app"
-            >
-              <FaGithub size={20} style={{ marginRight: "8px" }} />
-              GitHub
-            </Button>
-            <Button
-              style={{
-                width: "180px",
-                color: "black",
-                fontWeight: "600",
-                fontSize: "20px",
-                padding: "20px 25px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-               
-              }}
-              href="https://nguyenthanhdatportfolio-nqzav3mrn.vercel.app/"
-            >
-              <FaDemocrat  size={20} style={{ marginRight: "8px" }} />
-              Demo
-            </Button>
-          </div>
+          
         </div>
       </div>
 
