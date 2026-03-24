@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import f1 from "../../assets/images/pflo1.gif";
 import f2 from "../../assets/images/pflo2.gif";
 import f3 from "../../assets/images/pflo3.gif";
-import { Button } from "antd";
-import { FaCss3Alt, FaDemocrat, FaGithub, FaReact } from "react-icons/fa";
+
+import { FaCss3Alt, FaReact } from "react-icons/fa";
 
 import { TbBrandTypescript } from "react-icons/tb";
 
