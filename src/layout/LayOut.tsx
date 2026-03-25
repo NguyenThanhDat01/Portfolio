@@ -15,8 +15,6 @@ const LayOut = () => {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-
-        
       }}
     >
       {/* HEADER */}
@@ -39,20 +37,24 @@ const LayOut = () => {
         style={{
           flex: 1,
           width: "100%",
-
-          // 🔥 bỏ maxWidth → full màn hình
-          padding: "clamp(12px, 4vw, 32px)",
+          display: "flex",              // 🔥 thêm
+          justifyContent: "center",     // 🔥 center page
         }}
       >
-        <Outlet />
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1200px",         // 🔥 giới hạn layout
+            padding: "clamp(12px, 4vw, 32px)",
+          }}
+        >
+          <Outlet />
+        </div>
       </Content>
 
       {/* FOOTER */}
-      <div>
-        <AppFooter />
-      </div>
+      <AppFooter />
     </div>
   );
 };
-
 export default LayOut;

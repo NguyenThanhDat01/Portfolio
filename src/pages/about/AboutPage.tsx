@@ -12,44 +12,44 @@ const AboutPage = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+  AOS.refresh(); // 🔥 QUAN TRỌNG
+}, []);
 
   return (
-    <div
+    <div className="about-container"
       style={{
         backdropFilter: "blur(12px)",
         borderRadius: "20px",
-
         padding: "clamp(16px, 5vw, 40px)",
         maxWidth: "1000px",
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
-
-        /* 🔥 FIX QUAN TRỌNG */
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      {/* GRID LAYOUT */}
+      {/* GRID */}
       <div
+        className="about-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           alignItems: "center",
-          justifyItems: "center", // 🔥 center từng item
+          justifyItems: "center",
           gap: "40px",
         }}
       >
         {/* TEXT */}
-        <div data-aos="fade-right">
+        <div data-aos="fade-right" className="about-text">
           <h1
             style={{
               fontSize: "clamp(28px, 5vw, 40px)",
@@ -97,6 +97,7 @@ const AboutPage = () => {
         {/* IMAGE */}
         <div
           data-aos="fade-left"
+          className="about-image"
           style={{
             display: "flex",
             justifyContent: "center",
