@@ -6,9 +6,10 @@ import f1 from "../../assets/images/pflo1.gif";
 import f2 from "../../assets/images/pflo2.gif";
 import f3 from "../../assets/images/pflo3.gif";
 
-import { FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaGithub, FaReact } from "react-icons/fa";
 
 import { TbBrandTypescript } from "react-icons/tb";
+import { Button } from "antd";
 
 const Portfolio = () => {
   const { theme } = useContext(ThemeContext)!;
@@ -119,6 +120,25 @@ const Portfolio = () => {
           <p style={{ fontWeight: 700, color: isDark ? "#22d3ee" : " #ff0000", marginBottom: "6px", fontSize: "20px" }}>
             GitHup
           </p>
+            <div style={{ display: "flex", marginTop: "20px" }}>
+            <Button
+              className="btn-responsive"
+              style={{
+                width: "180px",
+                color: "black",
+                fontWeight: "600",
+                fontSize: "20px",
+                padding: "20px 25px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              href="https://github.com/NguyenThanhDat01/Portfolio"
+            >
+              <FaGithub size={20} style={{ marginRight: "8px" }} />
+              GitHub
+            </Button>
+          </div>
 
           
         </div>
