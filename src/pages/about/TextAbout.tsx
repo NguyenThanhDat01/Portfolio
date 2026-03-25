@@ -75,7 +75,7 @@ const TextAbout = () => {
             }}
           >
             <h2 style={{
-              color: isDark ? "#38bdf8" : "#ff0000",
+              color: isDark ? "#04fa00" : "#ff0000",
               fontSize: "clamp(20px, 4vw, 28px)",
               marginTop: 10,
             }}>
@@ -84,7 +84,7 @@ const TextAbout = () => {
             <p>{t("about.skills")}</p>
 
             <h2 style={{
-              color: isDark ? "#38bdf8" : "#ff0000",
+              color: isDark ? "#04fa00" : "#ff0000",
               fontSize: "clamp(20px, 4vw, 28px)",
             }}>
               {t("profile.experience")}
@@ -92,7 +92,7 @@ const TextAbout = () => {
             <p>{t("about.experience")}</p>
 
             <h2 style={{
-              color: isDark ? "#38bdf8" : "#ff0000",
+              color: isDark ? "#04fa00" : "#ff0000",
               fontSize: "clamp(20px, 4vw, 28px)",
             }}>
               {t("profile.strengths")}
@@ -100,7 +100,7 @@ const TextAbout = () => {
             <p>{t("about.strengths")}</p>
 
             <h2 style={{
-              color: isDark ? "#38bdf8" : "#ff0000",
+              color: isDark ? "#04fa00" : "#ff0000",
               fontSize: "clamp(20px, 4vw, 28px)",
             }}>
               {t("profile.goal")}

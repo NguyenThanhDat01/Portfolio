@@ -51,7 +51,7 @@ const AppHeader = () => {
           <Space size={isMobile ? 8 : 15} align="center">
             
             {/* 1. LOGO nằm ngoài cùng bên trái */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: isMobile ? "18px" : "26px", fontWeight: 600, color: isDark ? "#02f6ee" : "#0a25f1" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: isMobile ? "18px" : "26px", fontWeight: 600, color: isDark ? "#04fa00" : "#0a25f1" }}>
               <NavLink to="/" style={{ display: 'flex' }}>
                 <img src={avatar} alt="avatar" style={{ width: isMobile ? "40px" : "60px", height: isMobile ? "40px" : "60px", borderRadius: "50%", objectFit: "cover" }} />
               </NavLink>
@@ -87,9 +87,9 @@ const AppHeader = () => {
                     gap: 8,
                     fontSize: 18,
                     fontWeight: 600,
-                    color: isActive ? (isDark ? "#02f6ee" : "#0a25f1") : (isDark ? "#f1f5f9" : "#000000"),
+                    color: isActive ? (isDark ? "#04fa00" : "#0a25f1") : (isDark ? "#f1f5f9" : "#000000"),
                     textDecoration: "none",
-                    borderBottom: isActive ? `3px solid ${isDark ? "#02f6ee" : "#0a25f1"}` : "3px solid transparent",
+                    borderBottom: isActive ? `3px solid ${isDark ? "#04fa00" : "#0a25f1"}` : "3px solid transparent",
                     paddingBottom: 4,
                     transition: "all 0.3s",
                   })}
