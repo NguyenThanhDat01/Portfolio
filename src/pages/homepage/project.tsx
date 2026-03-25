@@ -16,191 +16,191 @@ const Project = () => {
     { name: "CSS", icon: <FaCss3Alt /> },
   ];
 
+  const projectData = [
+    { title: t("project.portfolio"), desc: t("portfolio.a") },
+    { title: t("project.medicare"), desc: t("booking.a") },
+    { title: t("project.commerce"), desc: t("commerce-2.a") },
+  ];
+
   return (
     <>
       <style>
         {`
         @keyframes float {
           0% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+          50% { transform: translateY(-15px); }
           100% { transform: translateY(0px); }
         }
 
-        /* ===== CONTAINER CENTER ===== */
+        /* ===== CONTAINER CHÍNH ===== */
         .project-container {
           width: 100%;
           display: flex;
           justify-content: center;
-          padding: 0 16px;
+          padding: 40px 16px;
+          box-sizing: border-box;
         }
 
         .project-main {
           width: 100%;
-          max-width: 1100px;
-          margin: 0 auto;
+          max-width: 1200px;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 40px;
+          justify-content: center; /* Căn giữa toàn bộ nội dung */
+          align-items: center;     /* Căn giữa theo chiều dọc */
+          gap: 60px;               /* Khoảng cách giữa ảnh và list */
           flex-wrap: wrap;
         }
 
-        /* ===== IMAGE ===== */
+        /* ===== PHẦN HÌNH ẢNH ===== */
         .project-image {
           flex: 1;
-          text-align: center;
+          min-width: 300px;
+          display: flex;
+          justify-content: center;
         }
 
         .project-image img {
           width: 100%;
-          max-width: 400px;
+          max-width: 380px;
           height: auto;
-          border-radius: 14px;
-          animation: float 3s ease-in-out infinite;
+          border-radius: 20px;
+          animation: float 4s ease-in-out infinite;
+          /* Đổ bóng cho ảnh thêm sinh động */
+          filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
         }
 
-        /* ===== LIST ===== */
+        /* ===== PHẦN DANH SÁCH CARD ===== */
         .project-list {
-          flex: 2;
+          flex: 1;
+          min-width: 300px;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          align-items: center; /* Đảm bảo các card con nằm giữa cột */
+          gap: 25px;
         }
 
-        /* ===== CARD ===== */
+        /* ===== CHI TIẾT CARD ===== */
         .project-card {
-          padding: 20px;
+          width: 100%;
+          max-width: 450px; /* Thu nhỏ card lại theo ý bạn */
+          padding: 25px;
           border-radius: 16px;
-          box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-sizing: border-box;
+          background: ${isDark ? "rgba(255,255,255,0.02)" : "#fff"};
         }
 
         .project-card:hover {
-          transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px);
+          box-shadow: 0 12px 30px rgba(0,0,0,0.1);
         }
 
-        /* ===== TABLET ===== */
-        @media (max-width: 1024px) {
-          .project-main {
-            gap: 30px;
-          }
-        }
-
-        /* ===== MOBILE ===== */
-        @media (max-width: 768px) {
+        /* ===== MOBILE & TABLET ===== */
+        @media (max-width: 992px) {
           .project-main {
             flex-direction: column;
+            gap: 40px;
           }
-
-          .project-image {
-            order: 1;
-          }
-
-          .project-list {
-            order: 2;
+          
+          .project-image, .project-list {
+            flex: none;
             width: 100%;
-            align-items: center;
-          }
-
-          .project-card {
-            width: 100%;
-            max-width: 500px;
           }
 
           .project-image img {
-            max-width: 280px;
+            max-width: 300px;
           }
         }
         `}
       </style>
 
-      {/* TITLE */}
-      <div style={{ textAlign: "center", marginBottom: "40px" }}>
+      {/* TIÊU ĐỀ PHẦN DỰ ÁN */}
+      <div style={{ textAlign: "center", marginBottom: "50px", marginTop: "20px" }}>
         <h2
           style={{
-            padding: "10px 34px",
-            borderRadius: "12px",
-            display: "inline-block",
+            padding: "12px 30px",
+            borderRadius: "50px",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "10px",
+            fontSize: "24px",
             color: isDark ? "#1cf704" : "#0A25F1",
-            border: isDark ? "1px solid green" : "1px solid #0A25F1",
+            border: isDark ? "2px solid #1cf704" : "2px solid #0A25F1",
+            backgroundColor: isDark ? "rgba(28, 247, 4, 0.05)" : "rgba(10, 37, 241, 0.05)",
           }}
         >
           <FaFolderOpen /> {t("navbar.project")}
         </h2>
       </div>
 
-      {/* MAIN */}
+      {/* NỘI DUNG CHÍNH */}
       <div className="project-container">
         <div className="project-main">
-
-          {/* IMAGE */}
+          
+          {/* CỘT TRÁI: ẢNH */}
           <div className="project-image">
-            <img src={pro} alt="project" />
+            <img src={pro} alt="Project Mockup" />
           </div>
 
-          {/* LIST */}
+          {/* CỘT PHẢI: DANH SÁCH DỰ ÁN */}
           <div className="project-list">
-            {[
-              { title: t("project.portfolio"), desc: t("portfolio.a") },
-              { title: t("project.medicare"), desc: t("booking.a") },
-              { title: t("project.commerce"), desc: t("commerce-2.a") },
-            ].map((item, index) => (
+            {projectData.map((item, index) => (
               <div
                 key={index}
                 className="project-card"
                 style={{
-                  border: isDark
-                    ? "1px solid green"
-                    : "1px solid #0A25F1",
+                  border: isDark ? "1px solid #1cf704" : "1px solid #0A25F1",
                 }}
               >
-                <p
+                <h3
                   style={{
                     color: isDark ? "#1cf704" : "#0A25F1",
                     fontSize: "22px",
-                    fontWeight: "bold",
+                    fontWeight: "700",
+                    marginTop: 0,
+                    marginBottom: "12px",
                   }}
                 >
                   {item.title}
+                </h3>
+
+                <p style={{ 
+                  lineHeight: "1.6", 
+                  fontSize: "15px", 
+                  opacity: 0.9,
+                  marginBottom: "20px" 
+                }}>
+                  {item.desc}
                 </p>
 
-                <p>{item.desc}</p>
+                <div style={{ borderTop: isDark ? "1px solid rgba(28,247,4,0.2)" : "1px solid rgba(10,37,241,0.1)", paddingTop: "15px" }}>
+                   <p style={{
+                      fontWeight: 700,
+                      color: isDark ? "#1cf704" : "#0A25F1",
+                      marginBottom: "10px",
+                      fontSize: "16px",
+                    }}>
+                      {t("project.tech-stack")}
+                    </p>
 
-                <p
-                  style={{
-                    fontWeight: 700,
-                    color: isDark ? "#1cf704" : "#0A25F1",
-                    marginBottom: "10px",
-                    fontSize: "18px",
-                  }}
-                >
-                  {t("project.tech-stack")}
-                </p>
-
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "10px",
-                  }}
-                >
-                  {techs.map((tech) => (
-                    <span
-                      key={tech.name}
-                      style={{
-                        padding: "6px 10px",
-                        borderRadius: "8px",
-                        fontSize: "14px",
-                        color: isDark ? "white" : "black",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "6px",
-                      }}
-                    >
-                      {tech.icon}
-                      {tech.name}
-                    </span>
-                  ))}
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+                      {techs.map((tech) => (
+                        <span
+                          key={tech.name}
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "6px",
+                            fontSize: "14px",
+                            color: isDark ? "#fff" : "#333",
+                          }}
+                        >
+                          <span style={{ color: isDark ? "#1cf704" : "#0A25F1" }}>{tech.icon}</span>
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
                 </div>
               </div>
             ))}

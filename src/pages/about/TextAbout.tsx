@@ -38,12 +38,26 @@ const TextAbout = () => {
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
+          .about-container {
+            min-height: calc(100vh - 100px); /* 👈 fix giống Contact */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
           .about-content {
-            text-align: center; /* 🔥 căn giữa text */
+            text-align: center;
           }
 
           .about-buttons {
-            justify-content: center; /* 🔥 button ra giữa */
+            justify-content: center;
+          }
+        }
+
+        /* MOBILE NHỎ */
+        @media (max-width: 480px) {
+          .about-content {
+            max-width: 320px;
           }
         }
         `}
@@ -60,47 +74,35 @@ const TextAbout = () => {
               fontSize: "clamp(14px, 2.5vw, 18px)",
             }}
           >
-            {/* SKILL */}
-            <h2
-              style={{
-                color: isDark ? "#38bdf8" : "#ff0000",
-                fontSize: "clamp(20px, 4vw, 28px)",
-                marginTop: 10,
-              }}
-            >
+            <h2 style={{
+              color: isDark ? "#38bdf8" : "#ff0000",
+              fontSize: "clamp(20px, 4vw, 28px)",
+              marginTop: 10,
+            }}>
               {t("profile.skill")}
             </h2>
             <p>{t("about.skills")}</p>
 
-            {/* EXPERIENCE */}
-            <h2
-              style={{
-                color: isDark ? "#38bdf8" : "#ff0000",
-                fontSize: "clamp(20px, 4vw, 28px)",
-              }}
-            >
+            <h2 style={{
+              color: isDark ? "#38bdf8" : "#ff0000",
+              fontSize: "clamp(20px, 4vw, 28px)",
+            }}>
               {t("profile.experience")}
             </h2>
             <p>{t("about.experience")}</p>
 
-            {/* STRENGTH */}
-            <h2
-              style={{
-                color: isDark ? "#38bdf8" : "#ff0000",
-                fontSize: "clamp(20px, 4vw, 28px)",
-              }}
-            >
+            <h2 style={{
+              color: isDark ? "#38bdf8" : "#ff0000",
+              fontSize: "clamp(20px, 4vw, 28px)",
+            }}>
               {t("profile.strengths")}
             </h2>
             <p>{t("about.strengths")}</p>
 
-            {/* GOAL */}
-            <h2
-              style={{
-                color: isDark ? "#38bdf8" : "#ff0000",
-                fontSize: "clamp(20px, 4vw, 28px)",
-              }}
-            >
+            <h2 style={{
+              color: isDark ? "#38bdf8" : "#ff0000",
+              fontSize: "clamp(20px, 4vw, 28px)",
+            }}>
               {t("profile.goal")}
             </h2>
             <p>{t("about.goal")}</p>

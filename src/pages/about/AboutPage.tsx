@@ -25,21 +25,26 @@ const AboutPage = () => {
         backdropFilter: "blur(12px)",
         borderRadius: "20px",
 
-        // 🔥 FIX CHÍNH Ở ĐÂY
         padding: "clamp(16px, 5vw, 40px)",
-        maxWidth: "1000px",      // cân đẹp hơn 1200
-        margin: "0 auto",        // center chuẩn
+        maxWidth: "1000px",
+        margin: "0 auto",
         width: "100%",
-        boxSizing: "border-box", // tránh lệch
+        boxSizing: "border-box",
 
+        /* 🔥 FIX QUAN TRỌNG */
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
+      {/* GRID LAYOUT */}
       <div
         style={{
-          minHeight: "60vh",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           alignItems: "center",
+          justifyItems: "center", // 🔥 center từng item
           gap: "40px",
         }}
       >
@@ -118,7 +123,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* ABOUT */}
+      {/* ABOUT SECTION */}
       <div data-aos="fade-up" style={{ marginTop: "40px" }}>
         <TextAbout />
       </div>

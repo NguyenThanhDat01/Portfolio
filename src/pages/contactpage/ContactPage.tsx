@@ -23,8 +23,10 @@ const Contact = () => {
           display: flex;
           justify-content: center;
           padding: 20px 16px;
+          box-sizing: border-box;
         }
 
+        /* DESKTOP giữ nguyên */
         .contact-card {
           width: 100%;
           max-width: 500px;
@@ -40,7 +42,17 @@ const Contact = () => {
 
         /* MOBILE */
         @media (max-width: 768px) {
+          .contact-container {
+            min-height: calc(100vh - 100px); /* 👈 fix lệch do header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
           .contact-card {
+            max-width: 320px;
+            padding: 20px;
+            border-radius: 16px;
             text-align: center;
           }
 
@@ -49,6 +61,15 @@ const Contact = () => {
             display: flex;
             align-items: center;
             gap: 6px;
+            flex-wrap: wrap;
+          }
+        }
+
+        /* MOBILE nhỏ */
+        @media (max-width: 480px) {
+          .contact-card {
+            max-width: 280px;
+            padding: 16px;
           }
         }
         `}
@@ -123,8 +144,11 @@ const Contact = () => {
             <p>
               <FaEnvelope /> Email:{" "}
               <a
-                href="mailto:nguyenthanhdat@gmail.com"
-                style={{ color: isDark ? "white" : "black" }}
+                href="mailto:nguyenthanhdat0938xxx@gmail.com"
+                style={{
+                  color: isDark ? "white" : "black",
+                  wordBreak: "break-all",
+                }}
               >
                 nguyenthanhdat0938xxx@gmail.com
               </a>
@@ -136,7 +160,10 @@ const Contact = () => {
                 href="https://github.com/NguyenThanhDat01"
                 target="_blank"
                 rel="noreferrer"
-                style={{ color: isDark ? "white" : "black" }}
+                style={{
+                  color: isDark ? "white" : "black",
+                  wordBreak: "break-all",
+                }}
               >
                 github.com/NguyenThanhDat01
               </a>

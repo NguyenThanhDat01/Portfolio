@@ -39,9 +39,10 @@ const Tool = () => {
 
       {/* GRID */}
       <div
+        className="tool-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+          gridTemplateColumns: "repeat(3, 1fr)", // desktop 3 card
           gap: "20px",
           maxWidth: "1100px",
           margin: "auto",
@@ -62,13 +63,22 @@ const Tool = () => {
               backdropFilter: "blur(10px)",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(-12px) scale(1.05)";
+              e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
               e.currentTarget.style.boxShadow = isDark
                 ? "0 0 30px rgba(0, 255, 51, 0.3)"
                 : "0 0 30px rgba(0, 89, 255, 0.3)";
             }}
             onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "";
+              e.currentTarget.style.boxShadow = "";
+            }}
+            onTouchStart={(e) => {
+              e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
+              e.currentTarget.style.boxShadow = isDark
+                ? "0 0 30px rgba(0, 255, 51, 0.3)"
+                : "0 0 30px rgba(0, 89, 255, 0.3)";
+            }}
+            onTouchEnd={(e) => {
               e.currentTarget.style.transform = "";
               e.currentTarget.style.boxShadow = "";
             }}
@@ -107,6 +117,43 @@ const Tool = () => {
           </div>
         ))}
       </div>
+
+      {/* RESPONSIVE */}
+  <style>{`
+  @media (max-width: 768px) {
+    .tool-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+    .tool-grid > div {
+      padding: 26px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tool-grid {
+      grid-template-columns: 1fr !important;
+      justify-items: center; /* ⭐ căn giữa */
+    }
+
+    .tool-grid > div {
+      width: 75%;           /* ⭐ nhỏ lại */
+      max-width: 240px;     /* ⭐ đẹp chuẩn mobile */
+      padding: 18px !important;
+      margin: 0 auto;
+      border-radius: 14px;
+    }
+
+    .tool-grid img {
+      max-width: 60px;      /* ⭐ icon nhỏ lại */
+      max-height: 50px;
+    }
+
+    .tool-grid > div div:last-child {
+      font-size: 16px;      /* ⭐ text nhỏ lại */
+    }
+  }
+`}</style>
     </div>
   );
 };

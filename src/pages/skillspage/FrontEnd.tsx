@@ -48,7 +48,7 @@ const FrontEnd = () => {
         className="skills-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)", // 👈 3 item / hàng
+          gridTemplateColumns: "repeat(3, 1fr)", // desktop 3 cột
           gap: "20px",
           maxWidth: "1100px",
           margin: "auto",
@@ -75,6 +75,16 @@ const FrontEnd = () => {
                 : "0 0 30px rgba(0, 89, 255, 0.3)";
             }}
             onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "";
+              e.currentTarget.style.boxShadow = "";
+            }}
+            onTouchStart={(e) => {
+              e.currentTarget.style.transform = "translateY(-12px) scale(1.05)";
+              e.currentTarget.style.boxShadow = isDark
+                ? "0 0 30px rgba(0, 255, 51, 0.3)"
+                : "0 0 30px rgba(0, 89, 255, 0.3)";
+            }}
+            onTouchEnd={(e) => {
               e.currentTarget.style.transform = "";
               e.currentTarget.style.boxShadow = "";
             }}
@@ -116,12 +126,39 @@ const FrontEnd = () => {
 
       {/* RESPONSIVE */}
       <style>{`
-        @media (max-width: 768px) {
-          .skills-grid {
-            grid-template-columns: repeat(1, 1fr) !important; /* 👈 mobile 2 item */
-          }
-        }
-      `}</style>
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+    .skills-grid > div {
+      padding: 26px !important;
+    }
+  }
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+  .skills-grid > div {
+    width: 75%;          /* ⭐ nhỏ lại */
+    max-width: 240px;    /* ⭐ giới hạn size đẹp */
+    padding: 18px !important; /* ⭐ gọn hơn */
+    margin: 0 auto;
+    border-radius: 14px;
+  }
+
+  .skill-icon img {
+    max-width: 60px;     /* ⭐ icon nhỏ lại */
+    max-height: 50px;
+  }
+
+  .skill-name {
+    font-size: 16px;     /* ⭐ text nhỏ lại */
+  }
+}
+`}</style>
     </div>
   );
 };

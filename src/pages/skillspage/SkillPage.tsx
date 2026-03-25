@@ -10,13 +10,14 @@ const SkillPage = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, // chạy 1 lần
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
 
   return (
     <div
+      className="skill-page-container" // ⭐ thêm class
       style={{
         display: "flex",
         flexDirection: "column",
@@ -25,6 +26,7 @@ const SkillPage = () => {
         padding: "40px 16px",
         maxWidth: "1200px",
         margin: "auto",
+        width: "100%", // ⭐ fix lệch mobile
       }}
     >
       
@@ -37,6 +39,15 @@ const SkillPage = () => {
       <div data-aos="fade-up" data-aos-delay="200">
         <Tool />
       </div>
+
+      {/* MOBILE FIX */}
+      <style>{`
+        @media (max-width: 480px) {
+          .skill-page-container {
+            padding: 40px 8px !important; /* ⭐ giảm padding tránh lệch */
+          }
+        }
+      `}</style>
 
     </div>
   );
