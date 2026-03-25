@@ -27,112 +27,132 @@ const Text = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        textAlign: "left",
-      }}
-    >
-      {/* TITLE */}
-      <h1
+    <>
+      <div className="text-container"
         style={{
-          fontSize: "clamp(24px, 5vw, 30px)", // 🔥 responsive
-          color: "white",
-          margin: 0,
-          lineHeight: "1.5",
+          textAlign: "left",
         }}
       >
-        <span
+        {/* TITLE */}
+        <h1
           style={{
-            fontWeight: "700",
-            color: isDark ? "red" : "#001eff",
+            fontSize: "clamp(20px, 5vw, 30px)",
+            color: "white",
+            margin: 0,
+            lineHeight: "1.5",
           }}
         >
-          {t("profile.hi")}
-        </span>
-      </h1>
-
-      {/* TYPED */}
-      <h2
-        style={{
-          color: isDark ? "#1cf704" : "#ff0033",
-          marginTop: "10px",
-          fontWeight: "600",
-          fontSize: "clamp(18px, 4vw, 24px)", // 🔥 responsive
-        }}
-      >
-        <span ref={el}></span>
-      </h2>
-
-      {/* DESC */}
-      <div
-        style={{
-          color: isDark ? "#ffffff" : "#000000",
-          maxWidth: "700px",
-          fontSize: "clamp(14px, 2.5vw, 18px)", // 🔥 responsive
-          lineHeight: "1.7",
-        }}
-      >
-        <p>{t("profile.school")}</p>
-        <p>{t("profile.department")}</p>
-        <p>{t("profile.specialized")}</p>
-      </div>
-
-      {/* BUTTON */}
-      <div
-        style={{
-          display: "flex",
-          gap: 15,
-          marginTop: 20,
-          flexWrap: "wrap", // 🔥 mobile xuống dòng
-        }}
-      >
-        <Link to="/project">
-          <Button
+          <span
             style={{
-              width: "clamp(140px, 45vw, 180px)", // 🔥 responsive
-              fontWeight: "600",
-              fontSize: "clamp(14px, 2.5vw, 18px)",
-              padding: "18px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: isDark ? "#2f8026" : "#0A25F1",
-              boxShadow: isDark
-                ? "0 10px 40px rgba(197, 255, 214, 0.2)"
-                : "0 10px 40px rgba(139, 94, 235, 0.2)",
-              border: isDark
-                ? "1px solid green"
-                : "1px solid #0A25F1",
+              fontWeight: "700",
+              color: isDark ? "red" : "#001eff",
             }}
           >
-            {t("profile.view-project")}
-          </Button>
-        </Link>
+            {t("profile.hi")}
+          </span>
+        </h1>
 
-        <a href="/CV/CV_NguyenThanhDat.pdf" download>
-          <Button
-            style={{
-              width: "clamp(140px, 45vw, 180px)",
-              fontWeight: "600",
-              fontSize: "clamp(14px, 2.5vw, 18px)",
-              padding: "18px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: isDark ? "#2f8026" : "#0A25F1",
-              boxShadow: isDark
-                ? "0 10px 40px rgba(197, 255, 214, 0.2)"
-                : "0 10px 40px rgba(139, 94, 235, 0.2)",
-              border: isDark
-                ? "1px solid green"
-                : "1px solid #0A25F1",
-            }}
-          >
-            {t("profile.download")}
-          </Button>
-        </a>
+        {/* TYPED */}
+        <h2
+          style={{
+            color: isDark ? "#1cf704" : "#ff0033",
+            marginTop: "10px",
+            fontWeight: "600",
+            fontSize: "clamp(16px, 4vw, 24px)",
+          }}
+        >
+          <span ref={el}></span>
+        </h2>
+
+        {/* DESC */}
+        <div
+          style={{
+            color: isDark ? "#ffffff" : "#000000",
+            maxWidth: "700px",
+            fontSize: "clamp(13px, 2.5vw, 18px)",
+            lineHeight: "1.7",
+          }}
+        >
+          <p>{t("profile.school")}</p>
+          <p>{t("profile.department")}</p>
+          <p>{t("profile.specialized")}</p>
+        </div>
+
+        {/* BUTTON */}
+        <div
+          style={{
+            display: "flex",
+            gap: 15,
+            marginTop: 20,
+            flexWrap: "wrap",
+          }}
+        >
+          <Link to="/project">
+            <Button
+              style={{
+                width: "clamp(120px, 40vw, 180px)",
+                fontWeight: "600",
+                fontSize: "clamp(12px, 2.5vw, 16px)",
+                padding: "16px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: isDark ? "#2f8026" : "#0A25F1",
+                boxShadow: isDark
+                  ? "0 10px 40px rgba(197, 255, 214, 0.2)"
+                  : "0 10px 40px rgba(139, 94, 235, 0.2)",
+                border: isDark
+                  ? "1px solid green"
+                  : "1px solid #0A25F1",
+              }}
+            >
+              {t("profile.view-project")}
+            </Button>
+          </Link>
+
+          <a href="/CV/CV_NguyenThanhDat.pdf" download>
+            <Button
+              style={{
+                width: "clamp(120px, 40vw, 180px)",
+                fontWeight: "600",
+                fontSize: "clamp(12px, 2.5vw, 16px)",
+                padding: "16px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: isDark ? "#2f8026" : "#0A25F1",
+                boxShadow: isDark
+                  ? "0 10px 40px rgba(197, 255, 214, 0.2)"
+                  : "0 10px 40px rgba(139, 94, 235, 0.2)",
+                border: isDark
+                  ? "1px solid green"
+                  : "1px solid #0A25F1",
+              }}
+            >
+              {t("profile.download")}
+            </Button>
+          </a>
+        </div>
       </div>
-    </div>
+
+      {/* RESPONSIVE CSS */}
+      <style>{`
+        @media (max-width: 768px) {
+          .text-container {
+            text-align: center !important;
+          }
+
+          .text-container div {
+            margin: 0 auto;
+          }
+
+          .text-container h1,
+          .text-container h2 {
+            text-align: center;
+          }
+        }
+      `}</style>
+    </>
   );
 };
 

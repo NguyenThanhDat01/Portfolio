@@ -1,10 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import avatar from "../../assets/images/detdet.jpg";
 
 import { ThemeContext } from "../../context/theme.context";
 import { useTranslation } from "react-i18next";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 import TextAbout from "./TextAbout";
 
 const AboutPage = () => {
@@ -12,17 +11,9 @@ const AboutPage = () => {
   const { theme } = useContext(ThemeContext)!;
   const isDark = theme === "dark";
 
-useEffect(() => {
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-
-  AOS.refresh(); // 🔥 QUAN TRỌNG
-}, []);
-
   return (
-    <div className="about-container"
+    <div
+      className="about-container"
       style={{
         backdropFilter: "blur(12px)",
         borderRadius: "20px",
@@ -49,7 +40,12 @@ useEffect(() => {
         }}
       >
         {/* TEXT */}
-        <div data-aos="fade-right" className="about-text">
+        <motion.div
+          className="about-text"
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1
             style={{
               fontSize: "clamp(28px, 5vw, 40px)",
@@ -92,18 +88,20 @@ useEffect(() => {
             <p>{t("about.department")}</p>
             <p>{t("about.specialized")}</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* IMAGE */}
-        <div
-          data-aos="fade-left"
+        <motion.div
           className="about-image"
           style={{
             display: "flex",
             justifyContent: "center",
           }}
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <img
+          <motion.img
             src={avatar}
             alt="avatar"
             style={{
@@ -111,23 +109,24 @@ useEffect(() => {
               borderRadius: "15px",
               objectFit: "cover",
               boxShadow: "0 15px 40px rgba(0, 0, 0, 0.5)",
-              transition: "0.3s",
               cursor: "pointer",
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = "scale(1.05)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.transform = "scale(1)")
-            }
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200 }}
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* ABOUT SECTION */}
-      <div data-aos="fade-up" style={{ marginTop: "40px" }}>
+      <motion.div
+        style={{ marginTop: "40px" }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <TextAbout />
-      </div>
+      </motion.div>
     </div>
   );
 };
