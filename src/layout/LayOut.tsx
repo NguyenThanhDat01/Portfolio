@@ -37,14 +37,14 @@ const LayOut = () => {
         style={{
           flex: 1,
           width: "100%",
-          display: "flex",              // 🔥 thêm
-          justifyContent: "center",     // 🔥 center page
+          display: "flex",              
+          justifyContent: "center",     
         }}
       >
         <div
           style={{
             width: "100%",
-            maxWidth: "1200px",         // 🔥 giới hạn layout
+            maxWidth: "1200px",       
             padding: "clamp(12px, 4vw, 32px)",
           }}
         >

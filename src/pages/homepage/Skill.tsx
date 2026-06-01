@@ -14,6 +14,8 @@ import postman from "../../assets/images/postman.svg";
 import router from "../../assets/images/react-router.svg";
 import axios from "../../assets/images/axios.svg";
 import tw from "../../assets/images/tailwindcss.svg";
+import mui from "../../assets/images/mui.svg";
+import bootstrap from "../../assets/images/react-bootstrap.svg";
 
 const Skill = () => {
   const { theme } = useContext(ThemeContext)!;
@@ -22,6 +24,7 @@ const Skill = () => {
 
   const skill = [
     { name: "Figma", images: figma },
+    { name: "MUI", images: mui,  },
     { name: "React", images: react },
     { name: "HTML", images: html },
     { name: "JavaScript", images: js },
@@ -32,6 +35,7 @@ const Skill = () => {
     { name: "React-Router", images: router },
     { name: "Axios", images: axios },
     { name: "TailwindCSS", images: tw },
+    { name: "React-Bootstrap", images: bootstrap,  },
   ];
 
   return (
@@ -126,7 +130,7 @@ const Skill = () => {
               style={{
                 fontSize: "14px", // 🔻 nhỏ hơn
                 fontWeight: "500",
-                color: "#38bdf8",
+                  color: isDark ? "#1cf704" : "#62a8f7",
                 textAlign: "center",
               }}
             >

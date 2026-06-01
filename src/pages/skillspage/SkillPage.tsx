@@ -4,6 +4,7 @@ import Tool from "./Tool";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Library from "./Library";
 
 const SkillPage = () => {
 
@@ -38,6 +39,10 @@ const SkillPage = () => {
       {/* Tools */}
       <div data-aos="fade-up" data-aos-delay="200">
         <Tool />
+      </div>
+      {/*Lib */}
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Library />
       </div>
 
       {/* MOBILE FIX */}
